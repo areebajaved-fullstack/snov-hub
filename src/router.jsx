@@ -12,6 +12,7 @@ import WebsiteAbout from "./pages/website/About";
 import WebsiteContact from "./pages/website/Contact";
 import WebsiteFeatures from "./pages/website/feautures";
 import WebsitePricing from "./pages/website/pricing";
+import WebsiteHowItWork from "./pages/website/HowItWork";
 import NotificationsScreen from "./pages/commanPages/notificationsScreen";
 import SharedChat from "./pages/commanPages/chat";
 import SharedProfile from "./pages/commanPages/profile";
@@ -31,6 +32,7 @@ const AppRouter = () => {
         <Route path="/contact" element={<WebsiteContact />} />
         <Route path="/features" element={<WebsiteFeatures />} />
         <Route path="/pricing" element={<WebsitePricing />} />
+        <Route path="/how-it-works" element={<WebsiteHowItWork />} />
       </Route>
 
       {/* Authentication routes */}

@@ -58,7 +58,7 @@ const Testimonials = () => {
                     {testimonials.map((item, idx) => (
                         <div 
                             key={idx} 
-                            className="break-inside-avoid bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col gap-6 hover:shadow-md transition-all duration-300"
+                            className="break-inside-avoid bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col gap-6 hover:shadow-md transition-all duration-300 min-h-[280px] h-full"
                         >
                             <div className="flex items-center gap-3">
                                 <img 

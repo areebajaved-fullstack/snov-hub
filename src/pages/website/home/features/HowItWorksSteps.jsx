@@ -3,12 +3,12 @@ import React from 'react';
 function SectionHeader() {
   return (
     <div className="flex flex-col justify-center items-center gap-4">
-      <div className="text-emerald-500 text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">How It Works</div>
-      <div className="w-full max-w-[486px] text-center text-white text-[28px] sm:text-[32px] md:text-[36px] font-semibold font-['Geist'] leading-[36px] sm:leading-[38px] md:leading-10">
-        From Knowledge to Intelligent Conversations
+      <div className="text-emerald-500 text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">How It Works</div>
+      <div className="w-full max-w-[486px] text-center text-white text-[2.25rem]  font-semibold font-['Inter_Tight'] leading-[36px] sm:leading-[38px] md:leading-10">
+        From Knowledge to <br/>Intelligent Conversations
       </div>
-      <div className="w-full max-w-[384px] text-center text-white text-[14px] sm:text-[16px] font-normal font-['Geist'] leading-6 tracking-wide">
-        Transform your static data into interactive AI assistants that provide instant, accurate answers.
+      <div className="w-full max-w-[410px] text-center text-white text-[1rem]  font-normal font-['Inter_Tight'] leading-6 tracking-wide">
+        Transform your static data into interactive AI assistants<br/> that provide instant, accurate answers.
       </div>
     </div>
   );
@@ -17,7 +17,7 @@ function SectionHeader() {
 function StepTag({ children }) {
   return (
     <div className="px-3 py-2 bg-emerald-400 rounded-lg inline-flex justify-center items-center gap-2">
-      <div className="text-gray-800 text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">{children}</div>
+      <div className="text-gray-800 text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">{children}</div>
     </div>
   );
 }
@@ -31,13 +31,13 @@ function UploadCardStack() {
     <>
       {/* Desktop (exact Figma stack) */}
       <div className="hidden md:block w-[494px] h-72 relative">
-        <div className="w-96 p-6 left-0 top-0 absolute bg-gray-800 rounded-xl inline-flex justify-start items-start gap-3">
+        <div className="w-96 p-6 left-0 top-0 absolute rounded-xl inline-flex justify-start items-start gap-3" style={{ backgroundColor: '#142F33' }}>
           <IconWrap className="bg-amber-400/10">
             <FileTextSvg />
           </IconWrap>
           <div className="inline-flex flex-col justify-start items-start gap-2">
-            <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">Technical Documentation</div>
-            <div className="w-64 text-white text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">
+            <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">Technical Documentation</div>
+            <div className="w-64 text-white text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
               Upload PDF, DOCX, and TXT files to train your agent
             </div>
           </div>
@@ -45,15 +45,15 @@ function UploadCardStack() {
 
         <div className="w-80 h-32 left-[68px] top-[67px] absolute bg-emerald-950/60 rounded-xl blur-2xl" />
 
-        <div className="w-80 p-6 left-[80px] top-[82px] absolute bg-gray-700 rounded-xl inline-flex justify-start items-start gap-3">
+        <div className="w-80 p-6 left-[80px] top-[82px] absolute rounded-xl inline-flex justify-start items-start gap-3" style={{ backgroundColor: '#142F33' }}>
           <IconWrap className="bg-violet-600/10">
             <QuestionSvg />
           </IconWrap>
           <div className="inline-flex flex-col justify-start items-start gap-2">
-            <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">
+            <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">
               Company FAQs &amp; Support Docs
             </div>
-            <div className="w-56 text-white text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">
+            <div className="w-56 text-white text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
               Import existing CSV or TXT files to automate answers
             </div>
           </div>
@@ -61,13 +61,13 @@ function UploadCardStack() {
 
         <div className="w-80 h-32 left-[152px] top-[148px] absolute bg-emerald-950/60 rounded-xl blur-2xl" />
 
-        <div className="w-80 p-6 left-[164px] top-[163px] absolute bg-gray-800 rounded-xl inline-flex justify-start items-start gap-3">
+        <div className="w-80 p-6 left-[164px] top-[163px] absolute rounded-xl inline-flex justify-start items-start gap-3" style={{ backgroundColor: '#142F33' }}>
           <IconWrap className="bg-orange-500/10">
             <XWikiSvg className="mt-2" />
           </IconWrap>
           <div className="inline-flex flex-col justify-start items-start gap-2">
-            <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">Live Website &amp; Wiki</div>
-            <div className="w-56 text-slate-100 text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">
+            <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">Live Website &amp; Wiki</div>
+            <div className="w-56 text-slate-100 text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
               Connect your help center URL for knowledge synchronization.
             </div>
           </div>
@@ -76,39 +76,39 @@ function UploadCardStack() {
 
       {/* Mobile (no scaling, no absolute positioning) */}
       <div className="md:hidden w-full max-w-[384px] mx-auto flex flex-col gap-3">
-        <div className="w-full p-6 bg-gray-800 rounded-xl inline-flex justify-start items-start gap-3">
+        <div className="w-full p-6 rounded-xl inline-flex justify-start items-start gap-3" style={{ backgroundColor: '#142F33' }}>
           <IconWrap className="bg-amber-400/10">
             <FileTextSvg />
           </IconWrap>
           <div className="flex-1 flex flex-col justify-start items-start gap-2">
-            <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">Technical Documentation</div>
-            <div className="w-full text-white text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">
+            <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">Technical Documentation</div>
+            <div className="w-full text-white text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
               Upload PDF, DOCX, and TXT files to train your agent
             </div>
           </div>
         </div>
 
-        <div className="w-full p-6 bg-gray-700 rounded-xl inline-flex justify-start items-start gap-3">
+        <div className="w-full p-6 rounded-xl inline-flex justify-start items-start gap-3" style={{ backgroundColor: '#142F33' }}>
           <IconWrap className="bg-violet-600/10">
             <QuestionSvg />
           </IconWrap>
           <div className="flex-1 flex flex-col justify-start items-start gap-2">
-            <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">
+            <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">
               Company FAQs &amp; Support Docs
             </div>
-            <div className="w-full text-white text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">
+            <div className="w-full text-white text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
               Import existing CSV or TXT files to automate answers
             </div>
           </div>
         </div>
 
-        <div className="w-full p-6 bg-gray-800 rounded-xl inline-flex justify-start items-start gap-3">
+        <div className="w-full p-6 rounded-xl inline-flex justify-start items-start gap-3" style={{ backgroundColor: '#142F33' }}>
           <IconWrap className="bg-orange-500/10">
             <XWikiSvg className="mt-2" />
           </IconWrap>
           <div className="flex-1 flex flex-col justify-start items-start gap-2">
-            <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">Live Website &amp; Wiki</div>
-            <div className="w-full text-slate-100 text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">
+            <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">Live Website &amp; Wiki</div>
+            <div className="w-full text-slate-100 text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
               Connect your help center URL for knowledge synchronization.
             </div>
           </div>
@@ -120,11 +120,11 @@ function UploadCardStack() {
 
 function PersonaCard() {
   return (
-    <div className="w-full max-w-[384px] xl:w-96 xl:max-w-none p-6 bg-gray-800 rounded-xl inline-flex flex-col justify-start items-start gap-3">
+    <div className="w-full max-w-[384px] xl:w-96 xl:max-w-none p-6 rounded-xl inline-flex flex-col justify-start items-start gap-3" style={{ backgroundColor: '#142F33' }}>
       <div className="self-stretch h-32 flex flex-col justify-start items-start gap-3">
-        <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">Agent Persona &amp; Instructions</div>
+        <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">Agent Persona &amp; Instructions</div>
         <div className="self-stretch flex-1 p-3 rounded-lg outline outline-1 outline-offset-[-1px] outline-gray-700 inline-flex justify-start items-center">
-          <div className="flex-1 self-stretch text-white text-[12px] font-normal font-['Geist'] leading-4 tracking-wide">
+          <div className="flex-1 self-stretch text-white text-[12px] font-normal font-['Inter_Tight'] leading-4 tracking-wide">
             Act as a professional support agent for our tech platform. Use the uploaded knowledge base to provide precise answers. If a user expresses
             frustration or asks for a human, trigger the escalation workflow immediately.
           </div>
@@ -132,14 +132,14 @@ function PersonaCard() {
       </div>
 
       <div className="self-stretch flex flex-col justify-start items-start gap-3">
-        <div className="text-white text-[16px] font-medium font-['Geist'] leading-6 tracking-wide">Agent Guardrails</div>
+        <div className="text-white text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">Agent Guardrails</div>
         <div className="self-stretch p-3 rounded-lg outline outline-1 outline-offset-[-1px] outline-gray-700 inline-flex justify-start items-center gap-3">
-          <div className="px-1 py-[3px] bg-gray-800 rounded-sm outline outline-1 outline-offset-[-1px] outline-gray-700 flex justify-start items-center gap-1">
-            <div className="text-white text-[12px] font-normal font-['Geist'] leading-4 tracking-wide">Professional Tone</div>
+          <div className="px-1 py-[3px] rounded-sm outline outline-1 outline-offset-[-1px] outline-gray-700 flex justify-start items-center gap-1" style={{ backgroundColor: '#142F33' }}>
+            <div className="text-white text-[12px] font-normal font-['Inter_Tight'] leading-4 tracking-wide">Professional Tone</div>
             <CancelSvg />
           </div>
-          <div className="px-1 py-[3px] bg-gray-800 rounded-sm outline outline-1 outline-offset-[-1px] outline-gray-700 flex justify-start items-center gap-1">
-            <div className="text-white text-[12px] font-normal font-['Geist'] leading-4 tracking-wide">Human Escalation</div>
+          <div className="px-1 py-[3px] rounded-sm outline outline-1 outline-offset-[-1px] outline-gray-700 flex justify-start items-center gap-1" style={{ backgroundColor: '#142F33' }}>
+            <div className="text-white text-[12px] font-normal font-['Inter_Tight'] leading-4 tracking-wide">Human Escalation</div>
             <CancelSvg />
           </div>
         </div>
@@ -150,20 +150,20 @@ function PersonaCard() {
 
 function DeploymentsCard() {
   return (
-    <div className="w-full max-w-[384px] xl:w-96 xl:max-w-none rounded-xl inline-flex flex-col xl:ml-[100px] justify-start items-start gap-3">
-      <div className="text-white text-[18px] font-medium font-['Geist'] leading-7 tracking-wide">Active Deployments</div>
+    <div className="w-full max-w-[384px] xl:w-96 xl:max-w-none rounded-xl inline-flex flex-col xl:ml-[100px] justify-start items-start gap-3 relative z-10" >
+      <div className="text-white text-[18px] font-medium font-['Inter_Tight'] leading-7 tracking-wide">Active Deployments</div>
 
       <div className="self-stretch flex flex-col justify-start items-start gap-3">
         <div className="self-stretch rounded-lg outline outline-2 outline-gray-700/20 flex flex-col justify-start items-start gap-2">
-          <div className="self-stretch p-3 bg-gray-800 rounded-lg outline outline-1 outline-offset-[-1px] outline-gray-700 inline-flex justify-between items-center">
+          <div className="self-stretch p-3 rounded-lg outline outline-1 outline-offset-[-1px] outline-gray-700 inline-flex justify-between items-center" style={{ backgroundColor: '#142F33' }}>
             <div className="flex justify-start items-center gap-2">
-              <div className="text-white text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">🌐 Website Widget (Live)</div>
+              <div className="text-white text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">🌐 Website Widget (Live)</div>
             </div>
             <CaretUpSvg />
           </div>
         </div>
 
-        <div className="self-stretch p-1 bg-gray-800 rounded-xl outline outline-1 outline-offset-[-1px] outline-gray-700 flex flex-col justify-start items-start">
+        <div className="self-stretch p-1 rounded-xl outline outline-1 outline-offset-[-1px] outline-gray-700 flex flex-col justify-start items-start" style={{ backgroundColor: '#142F33' }}>
           {[
             { label: '💬 Slack Integration' },
             { label: '📱 WhatsApp Business' },
@@ -174,9 +174,9 @@ function DeploymentsCard() {
           ].map((item) => (
             <div
               key={item.label}
-              className={['self-stretch p-3 inline-flex justify-start items-center gap-2', item.active ? 'bg-gray-700 rounded-sm' : ''].join(' ')}
+              className={['self-stretch p-3 inline-flex justify-start items-center gap-2', item.active ? 'rounded-sm' : ''].join(' ')} style={item.active ? { backgroundColor: '#032125' } : {}}
             >
-              <div className="text-white text-[14px] font-normal font-['Geist'] leading-5 tracking-wide">{item.label}</div>
+              <div className="text-white text-[14px] font-normal font-['Inter_Tight'] leading-5 tracking-wide">{item.label}</div>
               <div className="size-3.5 relative" />
             </div>
           ))}
@@ -207,7 +207,7 @@ function StepIndicator() {
 
 export default function HowItWorksSteps() {
   return (
-    <section className="w-full bg-emerald-950 overflow-x-hidden">
+    <section className="w-full overflow-x-hidden" style={{ backgroundColor: '#032125' }}>
       <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-6 md:px-10 md:py-16 xl:px-28 xl:py-20">
         <div className="flex flex-col justify-start items-center gap-12 xl:gap-16">
           <SectionHeader />
@@ -216,8 +216,8 @@ export default function HowItWorksSteps() {
             <div className="self-stretch flex flex-col xl:flex-row justify-between items-start xl:items-center gap-10">
               <div className="w-full xl:w-96 inline-flex flex-col justify-center items-start gap-4">
                 <StepTag>Step 1</StepTag>
-                <div className="text-white text-[24px] font-semibold font-['Geist'] leading-7 tracking-tight">Upload Your Knowledge</div>
-              <div className="self-stretch text-slate-200 text-[14px] font-normal font-['Geist'] leading-6">
+                <div className="text-white text-[24px] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">Upload Your Knowledge</div>
+              <div className="self-stretch text-slate-200 text-[14px] font-normal font-['Inter_Tight'] leading-6">
                   Connect your documentation, FAQs, support articles, or internal wikis. The platform processes and structures your content for
                   intelligent retrieval.
                 </div>
@@ -235,8 +235,8 @@ export default function HowItWorksSteps() {
 
               <div className="order-1 xl:order-2 w-full xl:w-auto inline-flex flex-col justify-center items-start gap-4">
                 <StepTag>Step 2</StepTag>
-                <div className="text-white text-[24px] font-semibold font-['Geist'] leading-7 tracking-tight">Input Your Ideas</div>
-                <div className="w-full xl:w-[456px] text-slate-200 text-[14px] font-normal font-['Geist'] leading-6">
+                <div className="text-white text-[24px] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">Input Your Ideas</div>
+                <div className="w-full xl:w-[456px] text-slate-200 text-[14px] font-normal font-['Inter_Tight'] leading-6">
                   Define agent behavior, response style, and conversation flows. Set boundaries, escalation rules, and approval workflows to maintain
                   control.
                 </div>
@@ -246,8 +246,8 @@ export default function HowItWorksSteps() {
             <div className="self-stretch flex flex-col xl:flex-row justify-between items-start xl:items-center gap-10">
               <div className="w-full xl:w-96 inline-flex flex-col justify-center items-start gap-4">
                 <StepTag>Step 3</StepTag>
-                <div className="text-white text-[24px] font-semibold font-['Geist'] leading-7 tracking-tight">Deploy &amp; Monitor</div>
-              <div className="self-stretch text-slate-200 text-[14px] font-normal font-['Geist'] leading-6">
+                <div className="text-white text-[24px] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">Deploy &amp; Monitor</div>
+              <div className="self-stretch text-slate-200 text-[14px] font-normal font-['Inter_Tight'] leading-6">
                   Launch agents in minutes across multiple channels. Monitor performance in real-time and refine based on analytics and user feedback.
                 </div>
               </div>

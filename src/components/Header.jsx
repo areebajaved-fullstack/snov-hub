@@ -22,7 +22,7 @@ const Header = () => {
                     <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-[30px] lg:gap-[40px]">
                         <Link to="/" className="text-[#061A22] font-semibold text-[16px] whitespace-nowrap">Home</Link>
                         <Link to="/features" className="text-[#4B5563] font-medium text-[16px] whitespace-nowrap">Features</Link>
-                        <a href="#" className="text-[#4B5563] font-medium text-[16px] whitespace-nowrap">How it Works</a>
+                        <Link to="/how-it-works" className="text-[#4B5563] font-medium text-[16px] whitespace-nowrap">How it Works</Link>
                         <Link to="/pricing" className="text-[#4B5563] font-medium text-[16px] whitespace-nowrap">Pricing</Link>
                         <Link to="/contact" className="text-[#4B5563] font-medium text-[16px] whitespace-nowrap">Contact Us</Link>
                     </div>
@@ -62,7 +62,7 @@ const Header = () => {
                     <div className="flex flex-col gap-5 mt-4">
                         <Link to="/" className="text-[#061A22] font-semibold text-[16px]">Home</Link>
                         <Link to="/features" className="text-[#4B5563] text-[16px]">Features</Link>
-                        <a href="#" className="text-[#4B5563] text-[16px]">How it Works</a>
+                        <Link to="/how-it-works" className="text-[#4B5563] text-[16px]">How it Works</Link>
                         <Link to="/pricing" className="text-[#4B5563] text-[16px]">Pricing</Link>
                         <Link to="/contact" className="text-[#4B5563] text-[16px]">Contact Us</Link>
 

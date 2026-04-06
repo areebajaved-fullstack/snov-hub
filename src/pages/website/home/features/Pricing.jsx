@@ -59,7 +59,7 @@ const Pricing = () => {
 
   return (
     <section className="w-full bg-white py-16 md:py-20 px-5 sm:px-6 md:px-10 font-sans overflow-hidden">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-12">
@@ -90,11 +90,11 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 ">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-[32px] border border-gray-200 p-8 xl:p-10 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative group"
+              className="bg-white rounded-[32px] border border-gray-200 p-6 md:p-8 xl:p-10 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative group w-full"
             >
               <div className="flex flex-col gap-4">
                 {/* Plan Identity */}
