@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter Tight", sans-serif;
+  --font-primary: "Inter Tight", sans-serif;
+}
+
+/* Alias: treat any existing `font-family: Geist` usage as Inter Tight. */
+@font-face {
+  font-family: "Geist";
+  src: local("Inter Tight");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 500; /* matches Tailwind `font-medium` */
+}
+
+body {
+  font-family: var(--font-sans);
+}
