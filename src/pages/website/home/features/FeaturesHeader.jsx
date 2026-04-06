@@ -28,11 +28,11 @@ const FeaturesHeader = () => {
                 </div>
 
                 {/* Features Cards Container */}
-                <div className="flex flex-col lg:flex-row justify-start items-start gap-8 lg:gap-12">
+                <div className="flex flex-col justify-start items-start gap-8">
                     {/* Knowledge-Powered Training Card */}
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
-                        <div className="flex flex-col lg:flex-row justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0 lg:absolute lg:left-[40px] lg:top-[111px]">
-                            <div className="w-full lg:w-[533px]">
+                        <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
+                            <div className="w-full lg:w-[533px] lg:absolute lg:left-[40px] lg:top-[111px]">
                                 <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Knowledge-Powered Training
                                 </h3>
@@ -52,8 +52,8 @@ const FeaturesHeader = () => {
 
                     {/* Multi-Channel Deployment Card */}
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
-                        <div className="flex flex-col lg:flex-row justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0 lg:absolute lg:left-[627px] lg:top-[120px]">
-                            <div className="w-full lg:w-[475px]">
+                        <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
+                            <div className="w-full lg:w-[475px] lg:absolute lg:left-[627px] lg:top-[120px]">
                                 <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Multi-Channel Deployment
                                 </h3>
@@ -73,8 +73,8 @@ const FeaturesHeader = () => {
 
                     {/* Real-Time Analytics Card */}
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
-                        <div className="flex flex-col lg:flex-row justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0 lg:absolute lg:left-[40px] lg:top-[119.50px]">
-                            <div className="w-full lg:w-[533px]">
+                        <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
+                            <div className="w-full lg:w-[533px] lg:absolute lg:left-[40px] lg:top-[119.50px]">
                                 <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Real-Time Analytics
                                 </h3>
@@ -94,8 +94,8 @@ const FeaturesHeader = () => {
 
                     {/* Secure & Compliant Card */}
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
-                        <div className="flex flex-col lg:flex-row justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0 lg:absolute lg:left-[627px] lg:top-[119.50px]">
-                            <div className="w-full lg:w-[533px]">
+                        <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
+                            <div className="w-full lg:w-[533px] lg:absolute lg:left-[627px] lg:top-[119.50px]">
                                 <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Secure & Compliant
                                 </h3>

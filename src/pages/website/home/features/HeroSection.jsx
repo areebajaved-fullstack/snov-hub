@@ -48,7 +48,7 @@ const HeroSection = () => {
             />
           </div>  
           {/* Shorter "Glassy" Bottom Blur Overlay */}
-          <div className="absolute bottom-0 left-0 right-0 h-[15%] bg-gradient-to-t from-neutral-50/95 via-neutral-50/20 to-transparent backdrop-blur-[8px] z-20 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-[10%] bg-gradient-to-t from-neutral-50/95 via-neutral-50/20 to-transparent backdrop-blur-[8px] z-20 pointer-events-none"></div>
           
           {/* Bottom Edge Fade */}
           <div className="absolute bottom-0 left-0 right-0 h-[5%] bg-neutral-50 z-30 opacity-30 pointer-events-none"></div>
