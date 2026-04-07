@@ -47,8 +47,8 @@ const Testimonials = () => {
                 {/* Header */}
                 <div className="flex flex-col items-center text-center gap-4 mb-16">
                     <span className="text-emerald-500 text-base font-medium tracking-wide">Testimonials</span>
-                    <h2 className="text-slate-900 text-3xl md:text-4xl font-bold font-geist tracking-tight">Trusted by Modern Teams</h2>
-                    <p className="text-slate-500 text-base max-w-[600px] leading-relaxed">
+                    <h2 className="text-slate-900 text-[2.25rem] font-bold font-geist tracking-tight">Trusted by Modern Teams</h2>
+                    <p className=" text-slate-500 text-[1rem] max-w-[700px] leading-relaxed">
                         See how teams are transforming their customer support and internal operations with AI agents.
                     </p>
                 </div>

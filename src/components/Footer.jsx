@@ -1,4 +1,8 @@
 import React from 'react';
+import Instagram from '../assets/images/Instagram.png';
+import LinkedIn from '../assets/images/LinkedIn.png';
+import X from '../assets/images/X.png';
+import Facebook from '../assets/images/Facebook.png';
 
 const Footer = () => {
     return (
@@ -10,8 +14,8 @@ const Footer = () => {
                     {/* The "Hill" Glow effect - Centered tighter */}
                     <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-[1800px] max-w-[1800px] h-[1000px] bg-emerald-500/5 rounded-[100%] border-t border-emerald-500/10 pointer-events-none z-0"></div>
                     
-                    <h2 className="text-white text-3xl md:text-[48px] font-bold font-geist leading-tight tracking-tight relative z-10 max-w-[800px]">
-                        Write Better, Faster, and Smarter
+                    <h2 className="text-white text-[2.5rem] font-bold font-geist leading-tight tracking-tight relative z-10 max-w-[800px]">
+                        Write Better, Faster, and <br/> Smarter
                     </h2>
 
                     <div className="flex flex-col sm:flex-row items-center gap-3 relative z-10">
@@ -37,15 +41,15 @@ const Footer = () => {
                             <span className="text-[#2DD4BF] text-lg font-bold font-geist tracking-wide">Snov Hub</span>
                         </div>
 
-                        <p className="text-white/60 text-[13px] leading-relaxed max-w-[340px]">
+                        <p className="text-white/60 text-[0.875rem] leading-relaxed max-w-[340px]">
                             Agent AI helps teams build intelligent AI agents powered by their own knowledge. Automate conversations and scale support operations effortlessly.
                         </p>
 
-                        <div className="flex flex-wrap gap-2">
-                            <div className="px-3 py-1 rounded-full border border-white/10 bg-white/[0.02] text-[11px] font-normal text-white/80 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                            <div className="w-[171px] h-[34px] px-3 border border-white/10 bg-white/[0.02] text-[11px] font-normal text-white/80 flex items-center rounded">
                                 support@snovhub.com
                             </div>
-                            <div className="px-3 py-1 rounded-full border border-white/10 bg-white/[0.02] text-[11px] font-normal text-white/80 whitespace-nowrap">
+                            <div className="w-[135px] h-[34px] px-3 border border-white/10 bg-white/[0.02] text-[11px] font-normal text-white/80 flex items-center rounded">
                                 +1 (555) 123-4567
                             </div>
                         </div>
@@ -53,16 +57,16 @@ const Footer = () => {
 
                     {/* Right Column: Newsletter */}
                     <div className="flex flex-col gap-3.5 w-full lg:w-[440px]">
-                        <h3 className="text-white text-base font-normal tracking-wide">Join Our Newsletter</h3>
+                        <h3 className="text-white text-lg tracking-wide">Join Our Newsletter </h3>
                         <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
-                            <div className="flex-1 h-10 bg-white/[0.02] border border-white/10 rounded-lg px-4 flex items-center w-full">
+                            <div className="flex-1 h-10 bg-white/[0.02] border border-transparent rounded-lg px-4 flex items-center w-full">
                                 <input 
                                     type="email" 
                                     placeholder="Enter your email" 
-                                    className="bg-transparent border-none focus:outline-none text-white text-[13px] w-full placeholder-white/[0.15]"
+                                    className="bg-transparent border-none focus:outline-none text-white text-[13px] w-full h-[48px] placeholder-white/40"
                                 />
                             </div>
-                            <button className="h-10 px-6 border border-white/20 rounded-lg text-white text-[13px] font-semibold hover:bg-white/5 transition-all w-full sm:w-auto">
+                            <button className="h-10 px-6 border border-white rounded-lg text-white text-[13px] font-semibold hover:bg-white/5 transition-all w-full sm:w-auto">
                                 Subscribe
                             </button>
                         </div>
@@ -73,13 +77,21 @@ const Footer = () => {
                 <div className="w-full px-5 sm:px-6 md:px-28 pb-10 md:pb-8 pt-4 flex flex-col md:flex-row justify-between items-start md:items-end gap-10 md:gap-8 relative z-10">
                     <div className="flex flex-col gap-5 md:gap-4 order-2 md:order-1">
                         <div className="flex items-center gap-5 md:gap-4">
-                            <SocialIcon icon="facebook" />
-                            <SocialIcon icon="instagram" />
-                            <SocialIcon icon="x" />
-                            <SocialIcon icon="linkedin" />
+                            <a href="#" className="w-6 h-6 text-white/60 hover:text-white transition-colors">
+                                <img src={Facebook} alt="Facebook" className="w-full h-full object-contain" />
+                            </a>
+                            <a href="#" className="w-6 h-6 text-white/60 hover:text-white transition-colors">
+                                <img src={Instagram} alt="Instagram" className="w-full h-full object-contain" />
+                            </a>
+                            <a href="#" className="w-6 h-6 text-white/60 hover:text-white transition-colors">
+                                <img src={X} alt="X" className="w-full h-full object-contain" />
+                            </a>
+                            <a href="#" className="w-6 h-6 text-white/60 hover:text-white transition-colors">
+                                <img src={LinkedIn} alt="LinkedIn" className="w-full h-full object-contain" />
+                            </a>
                         </div>
                         <p className="text-white/30 text-[11px] md:text-[12px]">
-                            Copyright 2023 © Senew Tech. All Rights reserved
+                           "Designed and Developed by Senew Tech"
                         </p>
                     </div>
 
