@@ -36,10 +36,10 @@ const BuildSection = () => {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8">
             <div className="space-y-4">
-              <h2 className="text-slate-900 text-3xl sm:text-4xl lg:text-5xl font-semibold font-['Geist'] leading-tight lg:leading-[52.8px]">
-                Build AI Agents in Minutes
+              <h2 className="text-slate-900 text-[2.25rem] font-semibold font-['Inter_Tight'] leading-tight lg:leading-[52.8px]">
+                Build AI Agents in <br/> Minutes
               </h2>
-              <p className="text-slate-500 text-base sm:text-lg font-normal font-['Inter_Tight'] leading-6 sm:leading-8 max-w-lg">
+              <p className="text-slate-500 text-[1.125rem] font-normal font-['Inter_Tight'] leading-6 sm:leading-8 max-w-lg">
                 From zero to production in three simple steps. No coding required, no complex setup—just upload, configure, and deploy.
               </p>
             </div>
@@ -65,10 +65,10 @@ const BuildSection = () => {
                 return (
                   <div
                     key={index}
-                    className="w-full bg-white rounded-3xl outline outline-[1.26px] outline-offset-[-1.26px] outline-slate-200 p-6 sm:p-8"
+                    className="w-[280px] h-[180px] bg-white rounded-3xl outline outline-[1.26px] outline-offset-[-1.26px] outline-slate-200 p-4"
                   >
                     <div className="flex flex-col space-y-4">
-                      <div className={`w-10 h-10 ${stat.color} rounded-2xl flex items-center justify-center`}>
+                      <div className={`w-10 h-10 bg-[#DCFCE7] rounded-2xl flex items-center justify-center`}>
                         <Icon className="w-5 h-5" />
                       </div>
                       

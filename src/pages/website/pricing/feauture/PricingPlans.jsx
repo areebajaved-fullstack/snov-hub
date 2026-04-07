@@ -83,7 +83,7 @@ const PricingPlans = () => {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-8 mb-8 lg:mb-10">
           <div className="flex flex-col gap-4">
-            <h2 className="text-slate-900 text-2xl sm:text-3xl lg:text-4xl font-semibold font-['Geist'] leading-tight tracking-tight">
+            <h2 className="text-slate-900 text-2xl sm:text-3xl lg:text-4xl font-semibold font-['Inter_Tight'] leading-tight tracking-tight">
               Choose your plan
             </h2>
             <p className="text-slate-500 text-sm sm:text-base font-normal font-['Inter_Tight'] leading-6 tracking-wide max-w-lg">
@@ -125,7 +125,7 @@ const PricingPlans = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`px-6 sm:px-8 lg:px-10 py-6 bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 flex flex-col justify-start items-start gap-6 ${
+              className={`px-6 sm:px-8 lg:px-10 py-6 bg-white rounded-3xl outline outline-1 outline-offset-[1px] outline-slate-200 flex flex-col justify-start items-start gap-6 ${
                 plan.popular ? 'ring-2 ring-emerald-950/10 shadow-lg' : ''
               }`}
             >
@@ -139,7 +139,7 @@ const PricingPlans = () => {
                         </span>
                       </div>
                       {plan.popular && (
-                        <span className="text-indigo-400 text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-6 tracking-wide">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8378F7] to-[#EA86B4] text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-6 tracking-wide">
                           Most Popular
                         </span>
                       )}
@@ -149,7 +149,7 @@ const PricingPlans = () => {
                     </p>
                   </div>
                   <div className="flex items-end gap-2">
-                    <span className="text-slate-900 text-2xl sm:text-3xl font-semibold font-['Geist'] leading-9 tracking-tight">
+                    <span className="text-slate-900 text-2xl sm:text-3xl font-semibold font-['Inter_Tight'] leading-9 tracking-tight">
                       {plan.price}
                     </span>
                     {plan.period && (
@@ -160,7 +160,7 @@ const PricingPlans = () => {
                   </div>
                 </div>
                 
-                <div className="w-full h-0 outline outline-1 outline-offset-[-0.50px] outline-slate-200"></div>
+                <div className="w-full h-0 outline outline-1 outline-offset-[-1px] outline-slate-200"></div>
                 
                 <div className="flex flex-col justify-start items-start gap-4 w-full">
                   <span className="text-slate-900 text-base font-normal font-['Inter_Tight'] leading-6 tracking-wide">

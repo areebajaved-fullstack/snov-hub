@@ -26,7 +26,7 @@ const HeroSection = () => {
             {/* Description */}
             <div className="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl">
               <p className="text-white/70 text-[1rem] font-normal font-['Inter_Tight'] leading-6 sm:leading-7 md:leading-8">
-No coding required. Transform your knowledge into a fully deployed, intelligent AI agent in minutes.
+No coding required. Transform your knowledge into a fully deployed, intelligent<br/> AI agent in minutes.
               </p>
             </div>
           </div>
