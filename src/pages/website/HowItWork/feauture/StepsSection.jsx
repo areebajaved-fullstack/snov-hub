@@ -3,11 +3,11 @@ import React from 'react';
 function SectionHeader() {
   return (
     <div className="flex flex-col justify-center items-center gap-4">
-      <div className="text-emerald-500 text-[16px] font-medium font-['Inter_Tight'] leading-6 tracking-wide">How It Works</div>
-      <div className="w-full max-w-[486px] text-center text-white text-[2.25rem]  font-semibold font-['Inter_Tight'] leading-[36px] sm:leading-[38px] md:leading-10">
+      <div className="text-emerald-500 text-xs xs:text-sm sm:text-base font-medium font-['Inter_Tight'] leading-4 xs:leading-5 sm:leading-6 tracking-wide">How It Works</div>
+      <div className="w-full max-w-[486px] text-center text-white text-xl xs:text-2xl sm:text-[2.25rem] font-semibold font-['Inter_Tight'] leading-8 xs:leading-9 sm:leading-[36px] md:leading-10">
         From Knowledge to <br/>Intelligent Conversations
       </div>
-      <div className="w-full max-w-[410px] text-center text-white text-[1rem]  font-normal font-['Inter_Tight'] leading-6 tracking-wide">
+      <div className="w-full max-w-[410px] text-center text-white text-sm xs:text-base sm:text-[1rem] font-normal font-['Inter_Tight'] leading-5 xs:leading-6 sm:leading-6 tracking-wide">
         Transform your static data into interactive AI assistants<br/> that provide instant, accurate answers.
       </div>
     </div>

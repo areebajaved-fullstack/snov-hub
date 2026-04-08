@@ -15,7 +15,7 @@ const FeaturesHeader = () => {
                         <span className="text-[#36C180] font-medium text-[1rem] tracking-widest">
                             Our Features
                         </span>
-                        <h2 className="text-[#0F172A] text-[2.25rem] font-semibold font-['Inter_Tight'] leading-tight md:leading-[1.1] tracking-tight">
+                        <h2 className="text-[#0F172A] text-[2.25rem] font-semibold font-['Inter_Tight'] leading-tight md:leading-[1.1] tracking-tight mb-4 md:mb-6">
                             AI Built for Business Workflows
                         </h2>
                     </div>

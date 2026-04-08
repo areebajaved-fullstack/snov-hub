@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from '../assets/images/Logo.png';
+import logoImg from '../assets/images/Logo.svg';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 

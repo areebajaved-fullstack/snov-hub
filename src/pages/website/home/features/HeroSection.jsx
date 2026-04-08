@@ -1,10 +1,10 @@
 import React from 'react';
 import { ArrowUpRightIcon } from './Icons.jsx';
-import dashboardMock from '../../../../assets/images/dashboard-mock.png';
+import dashboardMock from '../../../../assets/images/dashboard-mock.svg';
 
 const HeroSection = () => {
   return (
-    <div data-layer="Hero" className="Hero w-full px-5 sm:px-6 md:px-10 xl:px-20 pt-4 md:pt-6 relative bg-neutral-50 flex flex-col justify-start items-center gap-2 md:gap-6 overflow-hidden font-sans">
+    <div data-layer="Hero" className="Hero w-full px-5 sm:px-6 md:px-10 xl:px-20 pt-4 md:pt-6 pb-8 md:pb-12 relative bg-neutral-50 flex flex-col justify-start items-center gap-2 md:gap-6 overflow-hidden font-sans">
       {/* Background decoration */}
       <div data-layer="Ellipse" className="Ellipse w-[200px] md:w-[300px] h-auto aspect-square left-[-50%] md:left-[-150px] top-[50px] md:top-[100px] absolute bg-neutral-100 rounded-full -z-10" />
       

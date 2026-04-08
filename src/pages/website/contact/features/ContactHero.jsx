@@ -3,11 +3,11 @@ import React from "react";
 const ContactHero = () => {
   return (
     <div className="w-full">
-      <section className="w-full relative bg-[#032125] overflow-hidden h-[350px] xs:h-[400px] sm:h-[450px] md:h-[474px]">
+      <section className="w-full relative bg-[#032125] overflow-hidden h-auto min-h-[350px] md:h-[474px]">
         {/* Background overlay */}
         <div className="absolute inset-0 opacity-5" aria-hidden="true" />
         
-        <div className="relative h-full flex items-center justify-start px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 xl:px-28 py-8 xs:py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="relative h-full flex items-center justify-start px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 xl:px-28 py-10 xs:py-12 sm:py-16 md:py-20 lg:py-24">
           <div className="w-full max-w-4xl space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8">
             {/* Badge */}
             <div className="w-24 xs:w-28 sm:w-32 md:w-36 h-9 xs:h-10 sm:h-11 px-3 xs:px-4 sm:px-5 bg-white/10 rounded-full outline outline-[1.26px] outline-offset-[-1.26px] outline-white/20 inline-flex justify-start items-center gap-2 xs:gap-2.5">
@@ -23,14 +23,14 @@ const ContactHero = () => {
         
             {/* Heading */}
             <div className="w-full">
-              <h1 className="text-transparent text-2xl xs:text-3xl sm:text-4xl md:text-[4rem] font-semibold font-geist leading-tight xs:leading-tight sm:leading-tight md:leading-tight bg-clip-text bg-gradient-to-r from-white to-white/90">
+              <h1 className="text-transparent text-3xl xs:text-4xl sm:text-5xl md:text-[4rem] font-semibold font-geist leading-tight xs:leading-tight sm:leading-tight md:leading-tight bg-clip-text bg-gradient-to-r from-white to-white/90">
                 Get In Touch
               </h1>
             </div>
             
             {/* Description */}
             <div className="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl">
-              <p className="text-white/70 text-sm xs:text-base sm:text-[1rem] font-normal font-['Inter-400'] font-['Inter-sans'] leading-5 xs:leading-6 sm:leading-7 md:leading-8">
+              <p className="text-white/70 text-base xs:text-lg sm:text-[1rem] font-normal font-['Inter-400'] font-['Inter-sans'] leading-relaxed xs:leading-relaxed sm:leading-relaxed md:leading-8">
                 Have questions? We're here to help. Reach out and we'll respond quickly.
               </p>
             </div>
