@@ -78,42 +78,42 @@ const PricingPlans = () => {
   };
 
   return (
-    <div className="w-full bg-white px-4 sm:px-6 lg:px-16 xl:px-28 py-12 sm:py-16 lg:py-20">
+    <div className="w-full bg-white px-3 xs:px-4 sm:px-6 lg:px-16 xl:px-28 py-8 xs:py-10 sm:py-12 lg:py-16 xl:py-20">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-8 mb-8 lg:mb-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4 xs:gap-5 sm:gap-6 lg:gap-8 mb-6 xs:mb-7 sm:mb-8 lg:mb-10">
           <div className="flex flex-col gap-4">
-            <h2 className="text-slate-900 text-2xl sm:text-3xl lg:text-4xl font-semibold font-['Inter_Tight'] leading-tight tracking-tight">
+            <h2 className="text-slate-900 text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-semibold font-['Inter_Tight'] leading-tight tracking-tight">
               Choose your plan
             </h2>
-            <p className="text-slate-500 text-sm sm:text-base font-normal font-['Inter_Tight'] leading-6 tracking-wide max-w-lg">
+            <p className="text-slate-500 text-xs xs:text-sm sm:text-base font-normal font-['Inter_Tight'] leading-5 xs:leading-6 tracking-wide max-w-lg">
               Choose a plan that fits your budget and scales your AI infrastructure.
             </p>
           </div>
           
           {/* Toggle Switch */}
-          <div className="flex p-1.5 bg-gray-100 rounded-2xl outline outline-1 outline-offset-[-1px] outline-slate-200 gap-3">
+          <div className="flex p-1 xs:p-1.5 bg-gray-100 rounded-xl xs:rounded-2xl outline outline-1 outline-offset-[-1px] outline-slate-200 gap-2 xs:gap-3">
             <button
               onClick={() => setIsYearly(false)}
-              className={`px-4 sm:px-6 py-2 rounded-xl flex justify-center items-center gap-2 transition-colors ${
+              className={`px-3 xs:px-4 sm:px-6 py-1.5 xs:py-2 rounded-lg xs:rounded-xl flex justify-center items-center gap-1.5 xs:gap-2 transition-colors ${
                 !isYearly 
                   ? 'bg-white text-slate-900 shadow-sm' 
                   : 'text-slate-600'
               }`}
             >
-              <span className="text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-6 tracking-wide">
+              <span className="text-xs xs:text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-5 xs:leading-6 tracking-wide">
                 Monthly
               </span>
             </button>
             <button
               onClick={() => setIsYearly(true)}
-              className={`px-4 sm:px-6 py-2 rounded-xl flex justify-center items-center gap-2 transition-colors ${
+              className={`px-3 xs:px-4 sm:px-6 py-1.5 xs:py-2 rounded-lg xs:rounded-xl flex justify-center items-center gap-1.5 xs:gap-2 transition-colors ${
                 isYearly 
                   ? 'bg-emerald-950 text-white' 
                   : 'text-slate-600'
               }`}
             >
-              <span className="text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-6 tracking-wide">
+              <span className="text-xs xs:text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-5 xs:leading-6 tracking-wide">
                 Yearly
               </span>
             </button>
@@ -121,11 +121,11 @@ const PricingPlans = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`px-6 sm:px-8 lg:px-10 py-6 bg-white rounded-3xl outline outline-1 outline-offset-[1px] outline-slate-200 flex flex-col justify-start items-start gap-6 ${
+              className={`px-4 xs:px-5 sm:px-6 lg:px-8 xl:px-10 py-4 xs:py-5 sm:py-6 bg-white rounded-2xl xs:rounded-3xl outline outline-1 outline-offset-[1px] outline-slate-200 flex flex-col justify-start items-start gap-4 xs:gap-5 sm:gap-6 ${
                 plan.popular ? 'ring-2 ring-emerald-950/10 shadow-lg' : ''
               }`}
             >
@@ -134,26 +134,26 @@ const PricingPlans = () => {
                   <div className="w-full flex flex-col justify-start items-start gap-4">
                     <div className="w-full flex justify-between items-center">
                       <div className={`px-3 py-2 ${getColorClasses(plan.color, 'bg')} rounded-lg flex justify-center items-center gap-2`}>
-                        <span className={`${getColorClasses(plan.color, 'text')} text-sm sm:text-base font-medium font-['Inter_Tight'] leading-6 tracking-wide`}>
+                        <span className={`${getColorClasses(plan.color, 'text')} text-xs xs:text-sm sm:text-base font-medium font-['Inter_Tight'] leading-5 xs:leading-6 tracking-wide`}>
                           {plan.name}
                         </span>
                       </div>
                       {plan.popular && (
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8378F7] to-[#EA86B4] text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-6 tracking-wide">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8378F7] to-[#EA86B4] text-xs xs:text-sm sm:text-base font-semibold font-['Inter_Tight'] leading-5 xs:leading-6 tracking-wide">
                           Most Popular
                         </span>
                       )}
                     </div>
-                    <p className="w-full text-slate-500 text-sm font-normal font-['Inter_Tight'] leading-5 tracking-wide">
+                    <p className="w-full text-slate-500 text-xs xs:text-sm font-normal font-['Inter_Tight'] leading-4 xs:leading-5 tracking-wide">
                       {plan.description}
                     </p>
                   </div>
                   <div className="flex items-end gap-2">
-                    <span className="text-slate-900 text-2xl sm:text-3xl font-semibold font-['Inter_Tight'] leading-9 tracking-tight">
+                    <span className="text-slate-900 text-xl xs:text-2xl sm:text-3xl font-semibold font-['Inter_Tight'] leading-8 xs:leading-9 tracking-tight">
                       {plan.price}
                     </span>
                     {plan.period && (
-                      <span className="text-slate-500 text-sm font-normal font-['Inter_Tight'] leading-5 tracking-wide">
+                      <span className="text-slate-500 text-xs xs:text-sm font-normal font-['Inter_Tight'] leading-4 xs:leading-5 tracking-wide">
                         {plan.period}
                       </span>
                     )}
@@ -163,7 +163,7 @@ const PricingPlans = () => {
                 <div className="w-full h-0 outline outline-1 outline-offset-[-1px] outline-slate-200"></div>
                 
                 <div className="flex flex-col justify-start items-start gap-4 w-full">
-                  <span className="text-slate-900 text-base font-normal font-['Inter_Tight'] leading-6 tracking-wide">
+                  <span className="text-slate-900 text-sm xs:text-base font-normal font-['Inter_Tight'] leading-5 xs:leading-6 tracking-wide">
                     {index === 0 ? 'Features' : index === 1 ? 'Everything in Starter, plus:' : 'Everything in Team, plus:'}
                   </span>
                   <div className="flex flex-col justify-start items-start gap-4 w-full">
@@ -172,7 +172,7 @@ const PricingPlans = () => {
                         <div className="relative flex-shrink-0">
                           <CheckIcon />
                         </div>
-                        <span className="text-slate-900 text-sm sm:text-base font-normal font-['Inter_Tight'] leading-6 tracking-wide">
+                        <span className="text-slate-900 text-xs xs:text-sm sm:text-base font-normal font-['Inter_Tight'] leading-4 xs:leading-6 tracking-wide">
                           {feature}
                         </span>
                       </div>
@@ -182,13 +182,13 @@ const PricingPlans = () => {
               </div>
               
               <button
-                className={`w-full px-4 py-3.5 rounded-xl inline-flex justify-center items-center gap-2 transition-colors ${
+                className={`w-full px-3 xs:px-4 py-2.5 xs:py-3.5 rounded-lg xs:rounded-xl inline-flex justify-center items-center gap-1.5 xs:gap-2 transition-colors ${
                   plan.buttonType === 'primary'
                     ? 'bg-emerald-950 text-white hover:bg-emerald-900'
                     : 'outline outline-1 outline-offset-[-1px] outline-slate-300 text-slate-900 hover:bg-slate-50'
                 }`}
               >
-                <span className="text-base sm:text-lg font-semibold font-['Inter_Tight'] leading-7 tracking-wide">
+                <span className="text-sm xs:text-base sm:text-lg font-semibold font-['Inter_Tight'] leading-6 xs:leading-7 tracking-wide">
                   {plan.buttonText}
                 </span>
               </button>
