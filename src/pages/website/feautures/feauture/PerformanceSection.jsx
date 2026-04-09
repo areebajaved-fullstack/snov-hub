@@ -28,7 +28,7 @@ const PerformanceSection = () => {
     <section aria-label="Performance metrics" className="w-full bg-white h-auto min-h-[400px] lg:h-[474px] relative overflow-hidden">
       <div className="mx-auto w-full max-w-7xl px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 xl:px-28 h-full flex flex-col justify-center items-center py-10 xs:py-12 sm:py-16 lg:py-20">
         <div className="text-center mb-6 xs:mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="text-slate-900 text-2xl xs:text-3xl sm:text-4xl lg:text-[2.25rem] font-semibold font-geist leading-tight lg:leading-[52.80px]">
+          <h2 className="text-slate-900 text-2xl xs:text-3xl sm:text-4xl lg:text-[2.25rem] font-bold font-geist leading-tight lg:leading-[52.80px]">
             Performance That Speaks for Itself
           </h2>
         </div>

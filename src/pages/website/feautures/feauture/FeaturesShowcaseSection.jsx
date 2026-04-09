@@ -425,7 +425,7 @@ const FeaturesShowcaseSection = () => {
             <div className="space-y-6">
               {/* Header */}
               <div className="flex justify-between items-center">
-                <span className="text-slate-900 text-sm font-normal font-['Inter_Tight'] leading-5">Performance Dashboard</span>
+                <span className="text-slate-900 text-sm font-bold font-['Inter_Tight'] leading-5">Performance Dashboard</span>
                 <div className="px-3 py-1 bg-emerald-400/5 rounded-full flex items-center gap-2">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_547_967)">
@@ -445,17 +445,17 @@ const FeaturesShowcaseSection = () => {
               {/* Stats Cards */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-emerald-400/5 rounded-2xl outline outline-[1.26px] outline-offset-[-1.26px] outline-emerald-100 p-3">
-                  <div className="text-slate-900 text-xl font-normal font-['Inter_Tight'] leading-8 mb-1">95%</div>
+                  <div className="text-slate-900 text-xl font-bold font-['Inter_Tight'] leading-8 mb-1">95%</div>
                   <div className="text-slate-500 text-xs font-normal font-['Inter_Tight'] leading-4 mb-2">Accuracy</div>
                   <div className="h-1 bg-emerald-400 rounded-full"></div>
                 </div>
                 <div className="bg-emerald-400/5 rounded-2xl outline outline-[1.26px] outline-offset-[-1.26px] outline-emerald-100 p-3">
-                  <div className="text-slate-900 text-xl font-normal font-['Inter_Tight'] leading-8 mb-1">88%</div>
+                  <div className="text-slate-900 text-xl font-bold font-['Inter_Tight'] leading-8 mb-1">88%</div>
                   <div className="text-slate-500 text-xs font-normal font-['Inter_Tight'] leading-4 mb-2">Resolved</div>
                   <div className="h-1 bg-emerald-400 rounded-full"></div>
                 </div>
                 <div className="bg-emerald-400/5 rounded-2xl outline outline-[1.26px] outline-offset-[-1.26px] outline-emerald-100 p-3">
-                  <div className="text-slate-900 text-xl font-normal font-['Inter_Tight'] leading-8 mb-1">4.8</div>
+                  <div className="text-slate-900 text-xl font-bold font-['Inter_Tight'] leading-8 mb-1">4.8</div>
                   <div className="text-slate-500 text-xs font-normal font-['Inter_Tight'] leading-4 mb-2">Satisfaction</div>
                   <div className="h-1 bg-emerald-400 rounded-full"></div>
                 </div>
@@ -533,7 +533,7 @@ const FeaturesShowcaseSection = () => {
                 {/* Service Icons Row - Responsive on mobile, absolute on desktop */}
                 <div className="grid grid-cols-3 xs:grid-cols-5 lg:block lg:static gap-3 xs:gap-4 justify-items-center">
                   {/* Slack Icon */}
-                  <div className="lg:absolute lg:left-[-1.09px] lg:top-[-1.05px] bg-white rounded-2xl sm:rounded-3xl shadow-[0px_0px_3.747990369796753px_0px_rgba(0,0,0,0.08)] outline outline-1 outline-offset-[-0.94px] outline-slate-100 inline-flex justify-start items-start gap-2 p-2.5 sm:p-3.5">
+                  <div className="lg:absolute lg:left-[-1.09px] lg:top-[-1.05px] bg-white rounded-2xl sm:rounded-3xl shadow-[0px_0px_3.747990369796753px_0px_rgba(0,0,0,0.08)] outline outline-1 outline-offset-[-0.94px] outline-slate-100 inline-flex justify-center items-center gap-2 p-2.5 sm:p-3.5">
                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-[19px] sm:h-[19px]">
                     <g clipPath="url(#clip0_547_3278)">
                     <path d="M3.98764 11.8096C3.98764 12.882 3.11304 13.7579 2.04048 13.7579C0.967918 13.7579 0.0922852 12.882 0.0922852 11.8096C0.0922852 10.7371 0.96821 9.86121 2.04062 9.86121H3.98779L3.98764 11.8096ZM4.9692 11.8096C4.9692 10.7371 5.84513 9.86121 6.91754 9.86121C7.98995 9.86121 8.86588 10.737 8.86588 11.8096V16.6866C8.86588 17.759 7.9901 18.635 6.91754 18.635C5.84513 18.635 4.9692 17.759 4.9692 16.6866V11.8096Z" fill="#DE1C59"/>
@@ -657,17 +657,17 @@ const FeaturesShowcaseSection = () => {
                 </div>
 
                 {/* Authorization Dialog */}
-                <div className="relative w-full max-w-[260px] xs:max-w-[300px] sm:max-w-xs lg:max-w-none flex justify-center lg:block lg:absolute lg:left-[86.67px] lg:top-[117.88px] bg-white rounded-xl outline outline-1 outline-offset-[-0.94px] outline-slate-100 inline-flex flex-col justify-center items-center gap-2.5 sm:gap-4 lg:gap-5 p-3.5 sm:p-5 lg:p-6 shadow-xl lg:shadow-none">
+                <div className="relative w-full max-w-[200px] xs:max-w-[220px] sm:max-w-[240px] lg:max-w-[260px] flex justify-center lg:block lg:absolute lg:left-[86.67px] lg:top-[117.88px] bg-white rounded-xl outline outline-1 outline-offset-[-0.94px] outline-slate-100 inline-flex flex-col justify-center items-center gap-2.5 sm:gap-4 lg:gap-5 p-3.5 sm:p-5 lg:p-6 shadow-xl lg:shadow-none">
                   <div className="self-stretch flex flex-col justify-start items-center gap-2 sm:gap-3">
                     <div className="inline-flex justify-center items-center gap-2 sm:gap-3">
                       <div className="w-7 h-7 sm:w-8 sm:h-8 relative bg-emerald-950 rounded-lg overflow-hidden flex justify-center items-center p-1.5 shrink-0">
                         <img src="/src/assets/images/Navigation.png" alt="Navigation" className="w-full h-full object-contain" />
                       </div>
-                      <div className="text-slate-900 text-xs sm:text-base font-semibold font-['Inter_Tight'] leading-tight sm:leading-5 tracking-tight">Data Authorization</div>
+                      <div className="text-slate-900 text-xs sm:text-base font-semibold font-['Inter_Tight'] leading-tight sm:leading-5 tracking-tight text-center">Data Authorization</div>
                     </div>
                     <div className="w-full text-center text-slate-500 text-[10px] sm:text-sm font-normal font-['Inter_Tight'] leading-tight sm:leading-relaxed tracking-normal px-1 sm:px-2">Authorize AI Agent with Role-Based Access</div>
                   </div>
-                  <div className="self-stretch inline-flex justify-center sm:justify-end items-center gap-2 sm:gap-3">
+                  <div className="self-stretch inline-flex justify-center items-center gap-2 sm:gap-3">
                     <div className="flex-1 sm:flex-none sm:w-24 px-2.5 py-1.5 sm:py-2 rounded-lg outline outline-1 outline-offset-[-0.94px] outline-slate-300 flex justify-center items-center cursor-pointer hover:bg-slate-50 transition-colors">
                       <div className="text-slate-900 text-[10px] sm:text-sm font-semibold font-['Inter_Tight']">Deny</div>
                     </div>

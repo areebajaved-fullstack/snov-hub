@@ -17,8 +17,8 @@ const ContactMain = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Form Section */}
-            <div className="w-full bg-white rounded-3xl outline outline-[1.30px] outline-offset-[-1.30px] outline-slate-200 p-6 sm:p-8">
-              <div className="space-y-6">
+            <div className="w-full h-[614px] bg-white rounded-3xl outline outline-[1.30px] outline-offset-[-1.30px] outline-slate-200 p-6 sm:p-8">
+              <div className="space-y-4">
                 {/* Form Heading */}
                 <h2 className="text-slate-900 text-[28px]  font-semibold font-geist leading-8 sm:leading-10">
                   Send us a message
@@ -146,10 +146,12 @@ const ContactMain = () => {
                 </div>
                 
                 {/* Submit Button */}
-                <div className="w-full h-12 bg-[#032125] rounded-2xl cursor-pointer hover:bg-emerald-900 transition-colors">
-                  <button className="w-full h-full bg-transparent border-none text-white text-sm sm:text-base font-medium font-primary leading-5 sm:leading-6">
-                    Send Message
-                  </button>
+                <div className="w-full">
+                  <div className="w-full h-12 bg-[#032125] rounded-2xl cursor-pointer hover:bg-emerald-900 transition-colors">
+                    <button className="w-full h-full bg-transparent border-none text-white text-sm sm:text-base font-medium font-primary leading-5 sm:leading-6">
+                      Send Message
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -168,7 +170,7 @@ const ContactMain = () => {
                       <EmailIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div>
-                      <h4 className="text-slate-900 text-sm sm:text-base font-normal font-primary leading-5 sm:leading-6 mb-1">
+                      <h4 className="text-slate-900 text-sm sm:text-base font-semibold font-primary leading-5 sm:leading-6 mb-1">
                         Email
                       </h4>
                       <p className="text-slate-500 text-xs sm:text-sm font-normal font-primary leading-4 sm:leading-5">
@@ -186,7 +188,7 @@ const ContactMain = () => {
                       <PhoneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div>
-                      <h4 className="text-slate-900 text-sm sm:text-base font-normal font-primary leading-5 sm:leading-6 mb-1">
+                      <h4 className="text-slate-900 text-sm sm:text-base font-semibold font-primary leading-5 sm:leading-6 mb-1">
                         Phone
                       </h4>
                       <p className="text-slate-500 text-xs sm:text-sm font-normal font-primary leading-4 sm:leading-5">
@@ -204,7 +206,7 @@ const ContactMain = () => {
                       <LocationIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div>
-                      <h4 className="text-slate-900 text-sm sm:text-base font-normal font-primary leading-5 sm:leading-6 mb-1">
+                      <h4 className="text-slate-900 text-sm sm:text-base font-semibold font-primary leading-5 sm:leading-6 mb-1">
                         Office
                       </h4>
                       <p className="text-slate-500 text-xs sm:text-sm font-normal font-primary leading-4 sm:leading-5">

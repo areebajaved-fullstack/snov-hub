@@ -3,23 +3,24 @@ import Instagram from '../assets/images/Instagram.png';
 import LinkedIn from '../assets/images/LinkedIn.png';
 import X from '../assets/images/X.png';
 import Facebook from '../assets/images/Facebook.png';
+import { FooterLogoIcon } from '../assets/icons/icons.jsx';
 
 const Footer = () => {
     return (
-        <section className="w-full bg-[#03151b] text-white overflow-hidden font-primary">
+        <section className="w-full h-[709px] bg-[#032125] text-white overflow-hidden font-primary">
             <div className="max-w-[1440px] mx-auto flex flex-col items-center">
                 
                 {/* CTA Section - Extremely compact and focused */}
                 <div className="relative w-full px-5 sm:px-6 md:px-24 pt-12 md:pt-14 pb-14 md:pb-16 flex flex-col items-center justify-center text-center gap-6">
                     {/* The "Hill" Glow effect - Centered tighter */}
-                    <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-[1800px] max-w-[1800px] h-[1000px] bg-emerald-500/5 rounded-[100%] border-t border-emerald-500/10 pointer-events-none z-0"></div>
+                    <div className="absolute top-[193px] left-[-289px] w-[2019px] h-[2019px] bg-gradient-to-b from-[#143034] to-[#143034]/0 rounded-full pointer-events-none z-0"></div>
                     
                     <h2 className="text-white text-[2.5rem] font-bold font-geist leading-tight tracking-tight relative z-10 max-w-[800px]">
                         Write Better, Faster, and <br/> Smarter
                     </h2>
 
                     <div className="flex flex-col sm:flex-row items-center gap-3 relative z-10">
-                        <button className="px-7 py-2.5 bg-[#2DD4BF] text-white text-base font-semibold rounded-lg flex items-center gap-2 hover:bg-[#26bba9] transition-all">
+                        <button className="px-7 py-2.5 bg-[#31C48D] text-white text-base font-semibold rounded-lg flex items-center gap-2 hover:bg-[#26bba9] transition-all">
                             Get Started
                             <ArrowUpRightIcon />
                         </button>
@@ -35,21 +36,21 @@ const Footer = () => {
                     {/* Left Column */}
                     <div className="flex flex-col gap-4 w-full md:max-w-[400px]">
                         <div className="flex items-center gap-2.5">
-                            <div className="w-8 h-8 bg-[#2DD4BF] rounded-lg flex items-center justify-center">
-                                <MagicWandIcon className="w-4.5 h-4.5 text-white" />
+                            <div className="w-8 h-8 bg-[#31C48D] rounded-lg flex items-center justify-center">
+                                <FooterLogoIcon className="w-[28px] h-[26px]" />
                             </div>
-                            <span className="text-[#2DD4BF] text-lg font-bold font-geist tracking-wide">Snov Hub</span>
+                            <span className="text-[#31C48D] text-lg font-bold font-geist tracking-wide">Snov Hub</span>
                         </div>
 
-                        <p className="text-white/60 text-[0.875rem] leading-relaxed max-w-[340px]">
+                        <p className="text-white text-[0.875rem] leading-relaxed max-w-[340px]">
                             Agent AI helps teams build intelligent AI agents powered by their own knowledge. Automate conversations and scale support operations effortlessly.
                         </p>
 
                         <div className="flex items-center gap-2">
-                            <div className="w-[171px] h-[34px] px-3 border border-white/10 bg-white/[0.02] text-[11px] font-normal text-white/80 flex items-center rounded">
+                            <div className="w-[180px] h-[40px] px-3 border border-white/10 bg-white/[0.02] text-[16px] font-normal text-white/80 flex items-center rounded">
                                 support@snovhub.com
                             </div>
-                            <div className="w-[135px] h-[34px] px-3 border border-white/10 bg-white/[0.02] text-[11px] font-normal text-white/80 flex items-center rounded">
+                            <div className="w-[155px] h-[40px] px-3 border border-white/10 bg-white/[0.02] text-[16px] font-normal text-white/80 flex items-center rounded">
                                 +1 (555) 123-4567
                             </div>
                         </div>
@@ -90,7 +91,7 @@ const Footer = () => {
                                 <img src={LinkedIn} alt="LinkedIn" className="w-full h-full object-contain" />
                             </a>
                         </div>
-                        <p className="text-white/30 text-[11px] md:text-[12px]">
+                        <p className="text-white text-[11px] md:text-[12px]">
                            "Designed and Developed by Senew Tech"
                         </p>
                     </div>

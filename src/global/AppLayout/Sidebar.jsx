@@ -7,14 +7,18 @@ import { logout } from "../../store/slices/authSlice";
 import { persistor } from "../../store";
 import {
   AdminDashboardNavIcon,
-  AdminChatNavIcon,
+  AdminAIagentNavIcon,
+  AdminKnowledgebaseNavIcon,
+  AdminHumanResource,
+   AdminChannelNavIcon ,
+   AdminRealAnalyticsNavIcon,
   RoleDashboardGridIcon,
   RoleProfileIcon,
   RoleChatIcon,
   LogoutIcon,
   XIcon,
 } from "../../assets/icons";
-import { logo } from "../../assets/logos";
+import { LogoIcon } from "../../assets/icons";
 
 function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
   const dispatch = useDispatch();
@@ -52,7 +56,14 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
       admin: {
         main: [
           { path: "/admin/dashboard", name: "Dashboard", icon: AdminDashboardNavIcon },
-          { path: "/admin/chat", name: "Chat", icon: AdminChatNavIcon },
+         
+          { path: "/admin/chat", name: "AI agents", icon: AdminAIagentNavIcon },
+         { path: "/admin/chat", name: "Knowledge base", icon: AdminKnowledgebaseNavIcon },
+         { path: "/admin/chat", name: "Human Inbox", icon: AdminHumanResource },
+         { path: "/admin/chat", name: "Channels", icon:  AdminChannelNavIcon  },
+         { path: "/admin/chat", name: "Analytics", icon: AdminRealAnalyticsNavIcon },
+         { divider: true },
+       
         ],
         bottom: [],
       },
@@ -103,7 +114,7 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
   const validRoles = ["admin", "agency", "company", "recruiter"];
   const roleName = validRoles.includes(detectedRole) ? detectedRole : null;
   const finalRoleName = roleName || "admin";
-  const roleLabel = finalRoleName.charAt(0).toUpperCase() + finalRoleName.slice(1);
+  const roleLabel = finalRoleName === "admin" ? "" : finalRoleName.charAt(0).toUpperCase() + finalRoleName.slice(1);
 
   const rawUserName =
     currentUser?.name ||
@@ -111,11 +122,11 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
     currentUser?.firstName ||
     currentUser?.username ||
     currentUser?.email?.split("@")[0] ||
-    "Nomad";
+    "SnovHub";
 
-  const firstWord = rawUserName.trim().split(/\s+/)[0] || "N";
+  const firstWord = rawUserName.trim().split(/\s+/)[0] || "S";
   const userInitial = firstWord.charAt(0).toUpperCase();
-  const brandTitle = `${firstWord}`;
+  const brandTitle = "SnovHub";
 
   const menuItems = getRoleBasedMenuItems(finalRoleName);
 
@@ -166,8 +177,8 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
         className={`
           flex items-center w-full h-[48px] pl-[10px] pr-4 gap-[10px] group transition-all duration-200 relative rounded-[10px] cursor-pointer
           ${isActive
-            ? "bg-[#FFFFFF1A] text-white"
-            : "text-white/70 hover:bg-white/5 hover:text-white"
+            ? "bg-[#3FA284] text-white shadow-lg shadow-[#3FA284]/25"
+            : "text-white/70 hover:bg-[#3FA284]/15 hover:text-white hover:translate-x-1"
           }
           ${extraClasses}
         `}
@@ -180,7 +191,7 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
         {/* Only show icon if item has no parent (not a nested item) */}
         {!item.parent && item.icon && (
           <div
-            className={`w-5 h-5 flex items-center justify-center ${isActive ? "text-white" : "text-white/70"
+            className={`w-5 h-5 flex items-center justify-center ${isActive ? "text-white" : "text-white/70 hover:text-white"
               }`}
           >
             <item.icon />
@@ -216,7 +227,7 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
     });
 
     return (
-      <div className="sidebar-content w-[18.5625rem] bg-gradient flex flex-col h-[100vh] relative py-0 sm:py-0">
+      <div className="sidebar-content w-[18.5625rem] bg-primary flex flex-col h-[100vh] relative py-0 sm:py-0">
         <div className=" rounded-lg flex flex-col h-full">
           {/* Mobile close button */}
           <button
@@ -230,12 +241,8 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
           <div className="h-24 px-6 pt-6 pb-[1.3px] border-b border-white/10 inline-flex flex-col justify-start items-start">
             <div className="self-stretch h-10 pr-5 inline-flex justify-between items-center">
               <div className="h-10 flex justify-start items-center gap-3">
-                <div className="size-12 rounded-[10px] overflow-hidden flex justify-center items-center bg-white/10">
-                  <img
-                    src={logo}
-                    alt="Nomad logo"
-                    className="h-12 w-12 object-cover"
-                  />
+                <div className="size-12 rounded-[12px] overflow-hidden flex justify-center items-center bg-gradient-to-br from-white/30 to-white/20 backdrop-blur-sm border border-white/10 shadow-lg">
+                  <LogoIcon />
                 </div>
                 <span className="text-white text-xl font-semibold leading-5">
                   {brandTitle}
@@ -251,6 +258,11 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
             <div className="space-y-1">
               {/* Render items in order, checking for parent groups */}
               {finalMenuItems?.main?.map((item, index) => {
+                // Render divider if item is a divider
+                if (item.divider) {
+                  return <div key={`divider-${index}`} className="border-t border-white/10 my-2"></div>;
+                }
+                
                 // If this item has a parent and we haven't processed this parent yet
                 if (item.parent && !processedParents.has(item.parent)) {
                   processedParents.add(item.parent);
@@ -268,8 +280,8 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
                       <div
                         onClick={() => toggleMenuExpansion(item.parent)}
                         className={`flex items-center w-full h-[42px] pl-[10px] pr-4 gap-[10px] group transition-all duration-200 relative rounded-md cursor-pointer ${hasActiveChild
-                          ? "bg-secondary text-white"
-                          : "text-white/70 hover:bg-white/5 hover:text-white"
+                          ? "bg-secondary text-white shadow-lg shadow-secondary/25"
+                          : "text-white/70 hover:bg-[#3FA284]/20 hover:text-white hover:translate-x-1"
                           }`}
                       >
                         <div
@@ -334,14 +346,14 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
           </nav>
 
           {/* User Section */}
-          <div className=" fixed left-0 border-t border-[#FFFFFF1A]  bottom-0 w-full md:static bg-[#131d33]">
+          <div className=" fixed left-0 border-t border-white/10 bottom-0 w-full md:static bg-gradient-to-t from-primary to-primary/95 backdrop-blur-sm">
             {/* Logout Button */}
             <button
               onClick={handleLogout}
-              className="flex items-center justify-start w-full h-[81px] p-4 gap-[10px] text-[#FFFFFFB2]  transition-all duration-200"
+              className="flex items-center justify-start w-full h-[81px] p-4 gap-[10px] text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200"
             >
               <div className="w-5 h-5 flex items-center justify-center">
-                <LogoutIcon color="text-gray-600 text-[1.4375rem]" />
+                <LogoutIcon className="w-5 h-5" />
               </div>
               <span className="text-base font-medium leading-[1.5625rem]  ">
                 Logout

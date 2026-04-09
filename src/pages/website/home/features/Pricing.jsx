@@ -94,11 +94,11 @@ const Pricing = () => {
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-[32px] border border-gray-200 p-6 md:p-8 xl:p-10 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative group w-full"
+              className={`bg-white rounded-[32px] border border-gray-200 p-4 md:p-6 xl:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative group w-[384px]`}
             >
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3">
                 {/* Plan Identity */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="flex justify-between items-center h-6">
                     <div className={`px-2.5 py-1.5 rounded-lg text-[13px] font-semibold tracking-wide ${plan.tagColor}`}>
                       {plan.name}
@@ -119,12 +119,12 @@ const Pricing = () => {
                   </div>
                 </div>
 
-                <div className="w-full h-[1px] bg-slate-50"></div>
+                <div className="w-full h-[1px] bg-slate-200"></div>
 
                 {/* Features List */}
-                <div className="space-y-5">
+                <div className="space-y-3">
                   <h4 className="text-[#0F172A] text-[15px] font-semibold">Features</h4>
-                  <ul className="space-y-4">
+                  <ul className="space-y-3">
                     {plan.features.map((feature, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-4">
                         <CheckIcon className="w-5 h-5 text-[#0F172A] flex-shrink-0 mt-0.5" />
@@ -138,9 +138,11 @@ const Pricing = () => {
               </div>
 
               {/* Action Button */}
-              <button className={`w-full mt-10 py-3.5 rounded-xl font-bold text-[16px] transition-all transform group-hover:scale-[1.01] shadow-sm ${plan.buttonStyle}`}>
-                {plan.buttonText}
-              </button>
+              <div className="mt-auto pt-6">
+                <button className={`w-full py-3.5 rounded-xl font-bold text-[16px] transition-all transform group-hover:scale-[1.01] shadow-sm ${plan.buttonStyle}`}>
+                  {plan.buttonText}
+                </button>
+              </div>
             </div>
           ))}
         </div>

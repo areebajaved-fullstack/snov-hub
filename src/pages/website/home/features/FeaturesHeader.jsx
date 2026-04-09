@@ -7,7 +7,7 @@ import card4 from '../../../../assets/images/Card4.png';
 
 const FeaturesHeader = () => {
     return (
-        <section className="w-full bg-neutral-50 py-8 md:py-10 px-5 sm:px-6 md:px-10 xl:px-20 relative z-20">
+        <section className="w-full bg-[#F5F5F5] py-8 md:py-10 px-5 sm:px-6 md:px-10 xl:px-20 relative z-20">
             <div className="max-w-[1200px] mx-auto mt-10 mb-10">
                 {/* Header Content */}
                 <div className="flex flex-col md:flex-row justify-between items-start gap-4 md:gap-20 mb-8 md:mb-12">
@@ -36,7 +36,7 @@ const FeaturesHeader = () => {
                                 <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Knowledge-Powered Training
                                 </h3>
-                                <p className="self-stretch justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
+                                <p className="w-[508px] justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
                                     Unleash your creativity and engage your audience! Whether you're crafting<br/> articles or sharing on social media, develop content that leaves a lasting<br/> impression on people.
                                 </p>
                             </div>
@@ -44,7 +44,7 @@ const FeaturesHeader = () => {
                                 <img
                                     src={card1}
                                     alt="Knowledge-Powered Training"
-                                    className="w-full h-full object-cover rounded-tl-[19.21px] rounded-tr-[19.21px]"
+                                    className="w-full h-full object-contain rounded-tl-[19.21px] rounded-tr-[19.21px]"
                                 />
                             </div>
                         </div>
@@ -57,7 +57,7 @@ const FeaturesHeader = () => {
                                 <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Multi-Channel Deployment
                                 </h3>
-                                <p className="self-stretch justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
+                                <p className="w-[475px] justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
                                     Deploy agents across web chat, Slack, email, or integrate via API. One agent,<br/> everywhere your team works.
                                 </p>
                             </div>
@@ -65,7 +65,7 @@ const FeaturesHeader = () => {
                                 <img
                                     src={card2}
                                     alt="Multi-Channel Deployment"
-                                    className="w-full h-full object-cover rounded-tl-[19.21px] rounded-tr-[19.21px]"
+                                    className="w-full h-full object-contain rounded-tl-[19.21px] rounded-tr-[19.21px]"
                                 />
                             </div>
                         </div>
@@ -86,7 +86,7 @@ const FeaturesHeader = () => {
                                 <img
                                     src={card4}
                                     alt="Real-Time Analytics"
-                                    className="w-full h-full object-cover rounded-tl-[19.21px] rounded-tr-[19.21px]"
+                                    className="w-full h-full object-contain rounded-tl-[19.21px] rounded-tr-[19.21px]"
                                 />
                             </div>
                         </div>
@@ -95,19 +95,19 @@ const FeaturesHeader = () => {
                     {/* Secure & Compliant Card */}
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
                         <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
-                            <div className="w-full lg:w-[533px] lg:absolute lg:left-[627px] lg:top-[119.50px]">
+                            <div className="w-full lg:w-[533px] lg:absolute lg:left-[40px] lg:top-[119.50px]">
                                 <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Secure & Compliant
                                 </h3>
-                                <p className="self-stretch justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
+                                <p className="w-[508px] justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
                                     Enterprise-grade security with SOC 2 compliance, data encryption, and role-based access controls built in from day one.
                                 </p>
                             </div>
-                            <div className="w-full lg:w-96 lg:h-72 lg:absolute lg:left-[93px] lg:top-[36px] bg-gray-100 rounded-tl-[19.21px] rounded-tr-[19.21px] border-l-[0.80px] border-r-[0.80px] border-t-[0.80px] border-slate-200 overflow-hidden">
+                            <div className="w-full lg:w-96 lg:h-72 lg:absolute lg:left-[680.15px] lg:top-[36px] bg-gray-100 rounded-tl-[19.21px] rounded-tr-[19.21px] border-l-[0.80px] border-r-[0.80px] border-t-[0.80px] border-slate-200 overflow-hidden">
                                 <img
                                     src={card3}
                                     alt="Secure & Compliant"
-                                    className="w-full h-full object-cover rounded-tl-[19.21px] rounded-tr-[19.21px]"
+                                    className="w-full h-full object-contain rounded-tl-[19.21px] rounded-tr-[19.21px]"
                                 />
                             </div>
                         </div>
