@@ -12,16 +12,16 @@ const FeaturesHeader = () => {
                 {/* Header Content */}
                 <div className="flex flex-col md:flex-row justify-between items-start gap-4 md:gap-20 mb-8 md:mb-12">
                     <div className="flex flex-col gap-2 md:gap-3 max-w-[650px]">
-                        <span className="text-[#36C180] font-medium text-[1rem] tracking-widest">
+                        <span className="text-[#36C180] font-medium text-[0.625rem] sm:text-[0.75rem] md:text-[1rem] tracking-widest text-center md:text-left">
                             Our Features
                         </span>
-                        <h2 className="text-[#0F172A] text-[2.25rem] font-semibold font-['Inter_Tight'] leading-tight md:leading-[1.1] tracking-tight mb-4 md:mb-6">
+                        <h2 className="text-[#0F172A] text-[1.25rem] sm:text-[1.5rem] md:text-[2.25rem] font-semibold font-['Inter_Tight'] leading-tight md:leading-[1.1] tracking-tight mb-4 md:mb-6 text-center md:text-left">
                             AI Built for Business Workflows
                         </h2>
                     </div>
 
                     <div className="max-w-[520px] pt-1 md:pt-10">
-                        <p className="text-[#64748B] text-[1rem] leading-[1.6] font-sans">
+                        <p className="text-[#64748B] text-[0.75rem] sm:text-[0.8125rem] md:text-[1rem] leading-[1.6] font-sans text-center md:text-left">
                             Our platform enables teams to build AI agents that understand company knowledge, respond accurately, and automate repetitive conversations.
                         </p>
                     </div>
@@ -33,10 +33,10 @@ const FeaturesHeader = () => {
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
                         <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
                             <div className="w-full lg:w-[533px] lg:absolute lg:left-[40px] lg:top-[111px]">
-                                <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
+                                <h3 className="w-full text-center md:text-left text-slate-900 text-[1rem] sm:text-[1.125rem] md:text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Knowledge-Powered Training
                                 </h3>
-                                <p className="w-[508px] justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
+                                <p className="w-full text-center md:text-left text-slate-500 text-[0.625rem] sm:text-[0.6875rem] md:text-[0.875rem] font-normal font-['Inter_Tight'] leading-5 tracking-wide">
                                     Unleash your creativity and engage your audience! Whether you're crafting<br/> articles or sharing on social media, develop content that leaves a lasting<br/> impression on people.
                                 </p>
                             </div>
@@ -54,10 +54,10 @@ const FeaturesHeader = () => {
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
                         <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
                             <div className="w-full lg:w-[475px] lg:absolute lg:left-[627px] lg:top-[120px]">
-                                <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
+                                <h3 className="w-full text-center md:text-left text-slate-900 text-[1rem] sm:text-[1.125rem] md:text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Multi-Channel Deployment
                                 </h3>
-                                <p className="w-[475px] justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
+                                <p className="w-full text-center md:text-left text-slate-500 text-[0.625rem] sm:text-[0.6875rem] md:text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
                                     Deploy agents across web chat, Slack, email, or integrate via API. One agent,<br/> everywhere your team works.
                                 </p>
                             </div>
@@ -75,10 +75,10 @@ const FeaturesHeader = () => {
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
                         <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
                             <div className="w-full lg:w-[533px] lg:absolute lg:left-[40px] lg:top-[119.50px]">
-                                <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
+                                <h3 className="w-full text-center md:text-left text-slate-900 text-[1rem] sm:text-[1.125rem] md:text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Real-Time Analytics
                                 </h3>
-                                <p className="w-[508px] justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
+                                <p className="w-full text-center md:text-left text-slate-500 text-[0.625rem] sm:text-[0.6875rem] md:text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
                                     Track conversations, measure performance, and gain insights into how your agents <br/> are performing across all touchpoints.
                                 </p>
                             </div>
@@ -96,10 +96,10 @@ const FeaturesHeader = () => {
                     <div className="w-full lg:w-[1200px] h-auto lg:h-80 relative bg-white rounded-3xl outline outline-1 outline-offset-[-1px] outline-slate-200 overflow-hidden">
                         <div className="flex flex-col lg:block justify-start items-start gap-4 lg:gap-8 p-6 lg:p-0">
                             <div className="w-full lg:w-[533px] lg:absolute lg:left-[40px] lg:top-[119.50px]">
-                                <h3 className="w-full justify-start text-slate-900 text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
+                                <h3 className="w-full text-center md:text-left text-slate-900 text-[1rem] sm:text-[1.125rem] md:text-[1.5rem] font-semibold font-['Inter_Tight'] leading-7 tracking-tight">
                                     Secure & Compliant
                                 </h3>
-                                <p className="w-[508px] justify-start text-slate-500 text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
+                                <p className="w-full text-center md:text-left text-slate-500 text-[0.625rem] sm:text-[0.6875rem] md:text-[0.875rem] font-normal font-['Inter_Tight'] leading-6">
                                     Enterprise-grade security with SOC 2 compliance, data encryption, and role-based access controls built in from day one.
                                 </p>
                             </div>
