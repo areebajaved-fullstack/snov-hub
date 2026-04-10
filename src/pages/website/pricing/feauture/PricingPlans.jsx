@@ -125,7 +125,7 @@ const PricingPlans = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`px-4 xs:px-5 sm:px-6 lg:px-8 xl:px-10 py-4 xs:py-5 sm:py-6 bg-white rounded-2xl xs:rounded-3xl outline outline-1 outline-offset-[1px] outline-slate-200 flex flex-col justify-start items-start gap-4 xs:gap-5 sm:gap-6 ${
+              className={`px-4 xs:px-5 sm:px-6 lg:px-8 xl:px-10 py-4 xs:py-5 sm:py-6 bg-white rounded-2xl xs:rounded-3xl outline outline-1 outline-offset-[1px] outline-slate-200 flex flex-col justify-start items-start gap-4 xs:gap-5 sm:gap-6 w-full lg:w-[384px] h-[553px] lg:h-auto ${
                 plan.popular ? 'ring-2 ring-emerald-950/10 shadow-lg' : ''
               }`}
             >
@@ -159,6 +159,8 @@ const PricingPlans = () => {
                     )}
                   </div>
                 </div>
+                
+                <div className="w-full h-px bg-slate-200 my-4"></div>
                 
                 <div className="w-full h-0 outline outline-1 outline-offset-[-1px] outline-slate-200"></div>
                 

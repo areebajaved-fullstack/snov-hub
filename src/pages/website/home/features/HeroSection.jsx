@@ -47,7 +47,7 @@ const HeroSection = () => {
         </div>
 
         {/* Dashboard Card */}
-        <div className="relative w-full lg:w-[1200px] mt-10 bg-white/5 backdrop-blur-[1px] rounded-3xl border border-white/40 shadow-[0px_40px_100px_rgba(0,0,0,0.08)] overflow-hidden">
+        <div className="relative w-full lg:w-[1240px] mt-10 bg-white/5 backdrop-blur-[1px] rounded-3xl border border-white/40 shadow-[0px_40px_100px_rgba(0,0,0,0.08)] overflow-hidden px-8 sm:px-12 md:px-16 lg:px-0">
 
           <img
             src={dashboardMock}

@@ -6,11 +6,11 @@ const Header = () => {
 
     return (
         <nav className="w-full bg-neutral-50 border-b border-slate-100" style={{ fontFamily: '"Inter Tight", sans-serif' }}>
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[60px]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20">
                 <div className="flex justify-between items-center h-[96px] w-full">
 
                     {/* Logo Section - Properly left aligned */}
-                    <div className="flex items-center gap-[6px] md:gap-[8px] flex-shrink-0">
+                    <div className="flex items-center gap-[30px] md:gap-[8px] flex-shrink-0">
                         <img src={logoImg}
                         className="w-[40px] md:w-[40px] h-auto" alt="logo" />
                         <span className="text-[#061A22] text-[18px] md:text-[20px] font-semibold whitespace-nowrap">
@@ -19,7 +19,7 @@ const Header = () => {
                     </div>
 
                     {/* Desktop Navigation Links - Centered */}
-                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-[30px] lg:gap-[40px]">
+                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center lg:gap-[40px]">
                         <Link to="/" className="text-[#061A22] font-semibold text-[16px] whitespace-nowrap hover:text-emerald-500 transition-colors duration-200">Home</Link>
                         <Link to="/features" className="text-[#4B5563] font-medium text-[16px] whitespace-nowrap hover:text-emerald-500 transition-colors duration-200">Features</Link>
                         <Link to="/how-it-works" className="text-[#4B5563] font-medium text-[16px] whitespace-nowrap hover:text-emerald-500 transition-colors duration-200">How it Works</Link>
@@ -29,7 +29,7 @@ const Header = () => {
 
                     {/* Desktop Actions - Properly right aligned */}
                     <div className="hidden md:flex items-center gap-[10px] flex-shrink-0">
-                        <button className="text-[#061A22] font-semibold text-[14px] lg:text-[16px] w-[100px] lg:w-[110px] py-[10px] lg:py-[11px] rounded-[10px] border border-[#E5E7EB] hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-600 transition-all duration-200">
+                        <button className="text-[#061A22] font-semibold text-[14px] lg:text-[16px] w-[110px] lg:w-[120px] py-[10px] lg:py-[11px] rounded-[10px] border border-[#E5E7EB] hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-600 transition-all duration-200">
                             Login
                         </button>
                         <button className="bg-[#061A22] text-white font-medium text-[14px] lg:text-[16px] px-[18px] lg:px-[22px] py-[10px] lg:py-[11px] rounded-[10px] flex items-center gap-[6px] hover:bg-emerald-600 transition-all duration-200 group">

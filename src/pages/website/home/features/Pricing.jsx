@@ -58,26 +58,26 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:py-20 px-5 sm:px-6 md:px-10 font-sans overflow-hidden">
+    <section className="w-full bg-white py-12 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 md:px-10 font-sans overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-12">
-          <div className="flex flex-col gap-4 max-w-[600px]">
-            <span className="text-emerald-500 text-base font-medium tracking-wide">Pricing</span>
-            <h2 className="text-slate-900 text-[28px] md:text-4xl font-bold font-sans tracking-tight">Choose your plan</h2>
-            <p className="text-slate-500 text-base leading-relaxed tracking-wide">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-8 md:gap-10 mb-8 md:mb-12">
+          <div className="flex flex-col gap-3 md:gap-4 max-w-[500px] md:max-w-[600px]">
+            <span className="text-emerald-500 text-sm md:text-base font-medium tracking-wide">Pricing</span>
+            <h2 className="text-slate-900 text-[24px] sm:text-[28px] md:text-4xl font-bold font-sans tracking-tight">Choose your plan</h2>
+            <p className="text-slate-500 text-sm md:text-base leading-relaxed tracking-wide">
               Choose a plan that fits your budget and scales your AI infrastructure.
             </p>
           </div>
 
           {/* Toggle Switch */}
-          <div className="p-1.5 bg-gray-100 rounded-2xl border border-slate-200 flex gap-2">
+          <div className="p-3 sm:p-4 md:p-1.5 bg-gray-100 rounded-2xl border border-slate-200 flex gap-2">
             {['Monthly', 'Yearly'].map((cycle) => (
               <button
                 key={cycle}
                 onClick={() => setBillingCycle(cycle)}
-                className={`px-6 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
+                className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
                   billingCycle === cycle
                     ? 'bg-emerald-950 text-white shadow-sm'
                     : 'text-slate-900 hover:bg-white/50'
@@ -90,11 +90,11 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className={`bg-white rounded-[32px] border border-gray-200 p-4 md:p-6 xl:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative group w-[384px]`}
+              className={`bg-white rounded-[24px] sm:rounded-[32px] border border-gray-200 p-3 sm:p-4 md:p-6 xl:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative group w-full sm:w-[384px]`}
             >
               <div className="flex flex-col gap-3">
                 {/* Plan Identity */}
@@ -107,14 +107,14 @@ const Pricing = () => {
                         <span className="text-[#D946EF] text-[13px] font-semibold tracking-tight">Most Popular</span>
                     )}
                   </div>
-                  <p className="text-[#64748B] text-[14px] leading-relaxed min-h-[40px]">{plan.description}</p>
+                  <p className="text-[#64748B] text-[13px] sm:text-[14px] leading-relaxed min-h-[35px]">{plan.description}</p>
                   
                   <div className="flex items-baseline gap-1 mt-2">
-                    <span className="text-[#0F172A] text-[40px] font-bold font-sans tracking-tight">
+                    <span className="text-[#0F172A] text-[32px] sm:text-[40px] font-bold font-sans tracking-tight">
                         {plan.price !== 'Custom' && '$'}{plan.price}
                     </span>
                     {plan.price !== 'Custom' && (
-                        <span className="text-[#64748B] text-[15px] font-medium">/{billingCycle === 'Yearly' ? 'Year' : 'Mon'}</span>
+                        <span className="text-[#64748B] text-[14px] sm:text-[15px] font-medium">/{billingCycle === 'Yearly' ? 'Year' : 'Mon'}</span>
                     )}
                   </div>
                 </div>
@@ -138,8 +138,8 @@ const Pricing = () => {
               </div>
 
               {/* Action Button */}
-              <div className="mt-auto pt-6">
-                <button className={`w-full py-3.5 rounded-xl font-bold text-[16px] transition-all transform group-hover:scale-[1.01] shadow-sm ${plan.buttonStyle}`}>
+              <div className="mt-auto pt-4 sm:pt-6">
+                <button className={`w-full py-3 sm:py-3.5 rounded-xl font-bold text-[14px] sm:text-[16px] transition-all transform group-hover:scale-[1.01] shadow-sm ${plan.buttonStyle}`}>
                   {plan.buttonText}
                 </button>
               </div>

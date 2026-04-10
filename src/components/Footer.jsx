@@ -11,63 +11,63 @@ const Footer = () => {
             <div className="max-w-[1440px] mx-auto flex flex-col items-center">
                 
                 {/* CTA Section - Extremely compact and focused */}
-                <div className="relative w-full px-5 sm:px-6 md:px-24 pt-12 md:pt-14 pb-14 md:pb-16 flex flex-col items-center justify-center text-center gap-6">
+                <div className="relative w-full px-4 sm:px-6 md:px-24 pt-8 sm:pt-10 md:pt-12 pb-10 sm:pb-14 md:pb-16 flex flex-col items-center justify-center text-center gap-4 sm:gap-6">
                     {/* The "Hill" Glow effect - Centered tighter */}
-                    <div className="absolute top-[193px] left-[-289px] w-[2019px] h-[2019px] bg-gradient-to-b from-[#143034] to-[#143034]/0 rounded-full pointer-events-none z-0"></div>
+                    <div className="absolute top-[150px] sm:top-[193px] left-[-289px] w-[2019px] h-[2019px] bg-gradient-to-b from-[#143034] to-[#143034]/0 rounded-full pointer-events-none z-0"></div>
                     
-                    <h2 className="text-white text-[2.5rem] font-bold font-geist leading-tight tracking-tight relative z-10 max-w-[800px]">
-                        Write Better, Faster, and <br/> Smarter
+                    <h2 className="text-white text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] font-bold font-geist leading-tight tracking-tight relative z-10 max-w-[600px] sm:max-w-[800px]">
+                        Write Better, Faster, and <br className="hidden sm:block" /> Smarter
                     </h2>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-3 relative z-10">
-                        <button className="px-7 py-2.5 bg-[#31C48D] text-white text-base font-semibold rounded-lg flex items-center gap-2 hover:bg-[#26bba9] transition-all">
+                    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 relative z-10">
+                        <button className="px-5 sm:px-7 py-2 sm:py-2.5 bg-[#31C48D] text-white text-sm sm:text-base font-semibold rounded-lg flex items-center gap-2 hover:bg-[#26bba9] transition-all">
                             Get Started
                             <ArrowUpRightIcon />
                         </button>
-                        <button className="px-7 py-2.5 border border-white/40 text-white text-base font-semibold rounded-lg hover:bg-white/5 transition-all">
+                        <button className="px-5 sm:px-7 py-2 sm:py-2.5 border border-white/40 text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-white/5 transition-all">
                             Schedule Demo
                         </button>
                     </div>
                 </div>
 
                 {/* Main Footer Body - High density layout */}
-                <div className="w-full px-5 sm:px-6 md:px-28 py-8 flex flex-col lg:flex-row justify-between items-start gap-10 lg:gap-20 relative z-10">
+                <div className="w-full px-4 sm:px-6 md:px-20 py-6 sm:py-8 flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10 lg:gap-20 relative z-10">
                     
                     {/* Left Column */}
-                    <div className="flex flex-col gap-4 w-full md:max-w-[400px]">
-                        <div className="flex items-center gap-2.5">
-                            <div className="w-8 h-8 bg-[#31C48D] rounded-lg flex items-center justify-center">
-                                <FooterLogoIcon className="w-[28px] h-[26px]" />
+                    <div className="flex flex-col gap-3 sm:gap-4 w-full md:max-w-[350px]">
+                        <div className="flex items-center gap-2 sm:gap-2.5">
+                            <div className="w-6 sm:w-8 h-6 sm:h-8 bg-[#31C48D] rounded-lg flex items-center justify-center">
+                                <FooterLogoIcon className="w-20 sm:w-[28px] h-5 sm:h-[26px]" />
                             </div>
-                            <span className="text-[#31C48D] text-lg font-bold font-geist tracking-wide">Snov Hub</span>
+                            <span className="text-white text-base sm:text-lg font-bold font-geist tracking-wide">Snov Hub</span>
                         </div>
 
-                        <p className="text-white text-[0.875rem] leading-relaxed max-w-[340px]">
+                        <p className="text-white text-[0.75rem] sm:text-[0.875rem] leading-relaxed max-w-[300px] sm:max-w-[340px]">
                             Agent AI helps teams build intelligent AI agents powered by their own knowledge. Automate conversations and scale support operations effortlessly.
                         </p>
 
                         <div className="flex items-center gap-2">
-                            <div className="w-[180px] h-[40px] px-3 border border-white/10 bg-white/[0.02] text-[16px] font-normal text-white/80 flex items-center rounded">
+                            <div className="w-[150px] sm:w-[180px] h-[35px] sm:h-[40px] px-2 sm:px-3 border border-white/10 bg-white/[0.02] text-[14px] sm:text-[16px] font-normal text-white flex items-center rounded">
                                 support@snovhub.com
                             </div>
-                            <div className="w-[155px] h-[40px] px-3 border border-white/10 bg-white/[0.02] text-[16px] font-normal text-white/80 flex items-center rounded">
+                            <div className="w-[130px] sm:w-[155px] h-[35px] sm:h-[40px] px-2 sm:px-3 border border-white/10 bg-white/[0.02] text-[14px] sm:text-[16px] font-normal text-white flex items-center rounded">
                                 +1 (555) 123-4567
                             </div>
                         </div>
                     </div>
 
                     {/* Right Column: Newsletter */}
-                    <div className="flex flex-col gap-3.5 w-full lg:w-[440px]">
-                        <h3 className="text-white text-lg tracking-wide">Join Our Newsletter </h3>
+                    <div className="flex flex-col gap-3 w-full lg:w-[440px]">
+                        <h3 className="text-white text-base sm:text-lg tracking-wide">Join Our Newsletter </h3>
                         <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
-                            <div className="flex-1 h-10 bg-white/[0.02] border border-transparent rounded-lg px-4 flex items-center w-full">
+                            <div className="flex-1 h-8 sm:h-10 bg-white/[0.02] border border-transparent rounded-lg px-3 sm:px-4 flex items-center w-full">
                                 <input 
                                     type="email" 
                                     placeholder="Enter your email" 
-                                    className="bg-transparent border-none focus:outline-none text-white text-[13px] w-full h-[48px] placeholder-white/40"
+                                    className="bg-transparent border-none focus:outline-none text-white text-[12px] sm:text-[13px] w-full h-[40px] sm:h-[48px] placeholder-white/40"
                                 />
                             </div>
-                            <button className="h-10 px-6 border border-white rounded-lg text-white text-[13px] font-semibold hover:bg-white/5 transition-all w-full sm:w-auto">
+                            <button className="h-8 sm:h-10 px-4 sm:px-6 border border-white rounded-lg text-white text-[12px] sm:text-[13px] font-semibold hover:bg-white/5 transition-all w-full sm:w-auto">
                                 Subscribe
                             </button>
                         </div>
@@ -75,7 +75,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar - Minimal padding and gaps */}
-                <div className="w-full px-5 sm:px-6 md:px-28 pb-10 md:pb-8 pt-4 flex flex-col md:flex-row justify-between items-start md:items-end gap-10 md:gap-8 relative z-10">
+                <div className="w-full px-4 sm:px-6 md:px-20 pb-8 md:pb-8 pt-4 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-8 relative z-10">
                     <div className="flex flex-col gap-5 md:gap-4 order-2 md:order-1">
                         <div className="flex items-center gap-5 md:gap-4">
                             <a href="#" className="w-6 h-6 text-white/60 hover:text-white transition-colors">
@@ -96,22 +96,22 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-10 sm:gap-16 md:gap-20 order-1 md:order-2 w-full md:w-auto justify-start">
-                        <div className="flex flex-col gap-2.5">
-                            <h4 className="text-white text-sm font-medium mb-1">Company</h4>
+                    <div className="flex flex-wrap gap-6 sm:gap-10 md:gap-16 lg:gap-20 order-1 md:order-2 w-full md:w-auto justify-start">
+                        <div className="flex flex-col gap-2 sm:gap-2.5">
+                            <h4 className="text-white text-xs sm:text-sm font-medium mb-1">Company</h4>
                             <div className="flex flex-col gap-2">
-                                <a href="#" className="text-white/40 hover:text-white text-[13px] transition-colors">Careers</a>
-                                <a href="#" className="text-white/40 hover:text-white text-[13px] transition-colors">About Us</a>
-                                <a href="#" className="text-white/40 hover:text-white text-[13px] transition-colors">Pricing</a>
+                                <a href="#" className="text-white/40 hover:text-white text-[11px] sm:text-[13px] transition-colors">Careers</a>
+                                <a href="#" className="text-white/40 hover:text-white text-[11px] sm:text-[13px] transition-colors">About Us</a>
+                                <a href="#" className="text-white/40 hover:text-white text-[11px] sm:text-[13px] transition-colors">Pricing</a>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-2.5">
-                            <h4 className="text-white text-sm font-medium mb-1">Resources</h4>
+                        <div className="flex flex-col gap-2 sm:gap-2.5">
+                            <h4 className="text-white text-xs sm:text-sm font-medium mb-1">Resources</h4>
                             <div className="flex flex-col gap-2">
-                                <a href="#" className="text-white/40 hover:text-white text-[13px] transition-colors">Documentation</a>
-                                <a href="#" className="text-white/40 hover:text-white text-[13px] transition-colors">API reference</a>
-                                <a href="#" className="text-white/40 hover:text-white text-[13px] transition-colors">Help Center</a>
-                                <a href="#" className="text-white/40 hover:text-white text-[13px] transition-colors">Community</a>
+                                <a href="#" className="text-white/40 hover:text-white text-[11px] sm:text-[13px] transition-colors">Documentation</a>
+                                <a href="#" className="text-white/40 hover:text-white text-[11px] sm:text-[13px] transition-colors">API reference</a>
+                                <a href="#" className="text-white/40 hover:text-white text-[11px] sm:text-[13px] transition-colors">Help Center</a>
+                                <a href="#" className="text-white/40 hover:text-white text-[11px] sm:text-[13px] transition-colors">Community</a>
                             </div>
                         </div>
                     </div>
