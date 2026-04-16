@@ -238,18 +238,14 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
           </button>
 
           {/* Brand Section */}
-          <div className="h-24 px-6 pt-6 pb-[1.3px] border-b border-white/10 inline-flex flex-col justify-start items-start">
-            <div className="self-stretch h-10 pr-5 inline-flex justify-between items-center">
-              <div className="h-10 flex justify-start items-center gap-3">
-                <div className="size-12 rounded-[12px] overflow-hidden flex justify-center items-center bg-gradient-to-br from-white/30 to-white/20 backdrop-blur-sm border border-white/10 shadow-lg">
-                  <LogoIcon />
+          <div data-layer="Container" className="Container self-stretch px-4 py-8 inline-flex flex-col justify-start items-start">
+            <div data-layer="Logo" className="Logo size- inline-flex justify-start items-center gap-2">
+              <div data-svg-wrapper data-layer="Logo" className="Logo relative">
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                  <LogoIcon className="w-[28px] h-[26px]" />
                 </div>
-                <span className="text-white text-xl font-semibold leading-5">
-                  {brandTitle}
-                  <br />
-                  <span className="text-[#FFFFFF99] text-xs font-normal ">{roleLabel}</span>
-                </span>
               </div>
+              <div data-layer="Jotter AI" className="JotterAi justify-start text-white text-xl font-bold font-['Inter_Tight'] leading-8 tracking-wide">{brandTitle}</div>
             </div>
           </div>
 
@@ -345,9 +341,8 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
             </div>
           </nav>
 
-          {/* User Section */}
-          <div className=" fixed left-0 border-t border-white/10 bottom-0 w-full md:static bg-gradient-to-t from-primary to-primary/95 backdrop-blur-sm">
-            {/* Logout Button */}
+          {/* User Section - Commented */}
+          {/* <div className=" fixed left-0 border-t border-white/10 bottom-0 w-full md:static bg-gradient-to-t from-primary to-primary/95 backdrop-blur-sm">
             <button
               onClick={handleLogout}
               className="flex items-center justify-start w-full h-[81px] p-4 gap-[10px] text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200"
@@ -358,8 +353,22 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
               <span className="text-base font-medium leading-[1.5625rem]  ">
                 Logout
               </span>
-
             </button>
+          </div> */}
+
+          {/* Plan Pro Section */}
+          <div data-layer="Container" className="Container self-stretch p-3 flex flex-col justify-start items-start">
+            <div data-layer="Background" className="Background self-stretch h-16 relative bg-white/10 rounded-xl">
+              <div data-layer="Container" className="Container w-52 left-[12px] top-[12px] absolute inline-flex flex-col justify-start items-start">
+                <div data-layer="Plan: Pro" className="PlanPro justify-center text-white/70 text-xs font-normal font-['Inter_Tight'] leading-4">Plan: Pro</div>
+              </div>
+              <div data-layer="Background" className="Background w-52 h-1.5 left-[12px] top-[34px] absolute bg-teal-900 rounded-full">
+                <div data-layer="Background" className="Background w-20 h-1.5 left-0 top-0 absolute bg-teal-600 rounded-full" />
+              </div>
+              <div data-layer="Container" className="Container w-52 left-[12px] top-[44px] absolute inline-flex flex-col justify-start items-start">
+                <div data-layer="4,000 / 10,000 messages" className="00010000Messages justify-center text-white/70 text-[10px] font-normal font-['Inter_Tight'] leading-4">4,000 / 10,000 messages</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

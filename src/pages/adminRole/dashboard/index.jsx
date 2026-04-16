@@ -3,28 +3,35 @@ import DashboardCardsContainer from "./features/dashboardCard";
 import BarGraph from "../../../components/BarGraph";
 import LineChart from "../../../components/nomadReusable/LineChart";
 import SectionHeader from "../../../components/nomadReusable/SectionHeader";
-import PendingFlag from "./features/pendingFlag";
-import TopAgencies from "./features/topAgencies";
-import RecentlyCard from "./features/recentCard";
+import ReusableDataTable from "../../../components/ReusableDataTable";
+import MonthlyUsage from "./features/MonthlyUsage";
+import WelcomeComponent from "./features/WelcomeComponent";
+import CreateAgentModal from "./features/CreateAgentModal";
+// import PendingFlag from "./features/pendingFlag";
 
 const AdminDashboard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const transactionVolumeData = [
-    { name: "Jan", value: 240 },
-    { name: "Feb", value: 310 },
-    { name: "Mar", value: 380 },
-    { name: "Apr", value: 430 },
-    { name: "May", value: 490 },
-    { name: "Jun", value: 560 },
+    { value: 120, time: "2pm" },
+    { value: 180, time: "4pm" },
+    { value: 240, time: "6pm" },
+    { value: 200, time: "8pm" },
+    { value: 160, time: "10pm" },
+    { value: 140, time: "12am" },
+    { value: 100, time: "2am" },
+    { value: 80, time: "4am" },
+    { value: 60, time: "6am" },
   ];
 
   const platformGrowthData = [
-    { month: "Jan", companies: 45, recruiters: 52 },
-    { month: "Feb", companies: 58, recruiters: 68 },
-    { month: "Mar", companies: 72, recruiters: 84 },
-    { month: "Apr", companies: 88, recruiters: 101 },
-    { month: "May", companies: 105, recruiters: 123 },
-    { month: "Jun", companies: 127, recruiters: 146 },
+    { days: "Mon", companies: 120, recruiters: 80 },
+    { days: "Tue", companies: 180, recruiters: 120 },
+    { days: "Wed", companies: 240, recruiters: 180 },
+    { days: "Thur", companies: 200, recruiters: 140 },
+    { days: "Fri", companies: 160, recruiters: 100 },
+    { days: "Sat", companies: 100, recruiters: 60 },
+    { days: "Sun", companies: 60, recruiters: 40 },
   ];
 
   return (
@@ -33,24 +40,40 @@ const AdminDashboard = () => {
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
           <div className="xl:col-span-12 space-y-6">
           
+            <div className=" w-full rounded-[1.5rem]">
+              <WelcomeComponent onNewAgentClick={() => setIsModalOpen(true)} />
+            </div>
+
             <div className="rounded-[1.5rem]">
               <DashboardCardsContainer />
+            </div>
+
+            <CreateAgentModal 
+              isOpen={isModalOpen} 
+              onClose={() => setIsModalOpen(false)} 
+            />
+
+            <div className="rounded-[1.5rem]">
+              <MonthlyUsage />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-4 lg:gap-3">
               <div className="w-full">
               <LineChart
-                title="Platform Growth"
+                title="Conversation Volume"
                 subtitle="New Companies vs New Recruiters"
                 data={platformGrowthData}
-                dataKeys={["companies", "recruiters"]}
-                dataLabels={["Companies", "Recruiters"]}
-                colors={["#6366F1", "#F59E0B"]}
-                yAxisDomain={[0, 160]}
-                yAxisTicks={[0, 40, 80, 120, 160]}
+                dataKeys={["companies"]}
+                dataLabels={["Companies"]}
+         colors={["#3FA284", "#114F38", ]}
+                xAxisKey="days"
+                yAxisDomain={[0, 280]}
+                yAxisTicks={[0, 50, 100, 150, 200, 250]}
                 yAxisFormatter={(value) => `${value}`}
-                showDropdowns={false}
+                showDropdowns={true}
                 currency=""
+                showLegend={true}
+                height={288}
               />
               </div>
 
@@ -61,23 +84,21 @@ const AdminDashboard = () => {
                   data={transactionVolumeData}
                   dataKeys={["value"]}
                   dataLabels={["GMV"]}
-                  colors={["#6366F1", "#10B981", "#EC4899", "#F59E0B", "#6366F1", "#EC4899"]}
-                  yAxisDomain={[0, 600]}
-                  yAxisTicks={[0, 150, 300, 450, 600]}
+                  colors={["#3FA284", "#114F38", ]}
+                  yAxisDomain={[0, 250]}
+                  yAxisTicks={[0, 50, 100, 150, 200, 250]}
                   yAxisFormatter={(value) => `${value}`}
                   height={327}
-                  showDropdowns={false}
+                  showDropdowns={true}
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-4 lg:gap-3">
-              <PendingFlag />
-              <TopAgencies />
+            <div className="grid grid-cols-1  gap-4 lg:gap-3">
+              <ReusableDataTable />
+             
               </div>
 
-              <div className="grid grid-cols-1 gap-4 lg:gap-3">
-              <RecentlyCard />
-              </div>
+             
           </div>
         </div>
       </div>

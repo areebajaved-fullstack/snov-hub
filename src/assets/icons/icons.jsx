@@ -1244,6 +1244,7 @@ export const CtaInstantSetupIcon = ({ className, ...props }) => (
     />
   </svg>
 );
+
 export const HeaderLanguageIcon = ({ className, ...props }) => (
   <svg
     className={className}
@@ -1336,34 +1337,7 @@ export const DashboardCardUsersIcon = ({ className, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M13.3217 17.4836V15.8185C13.3217 14.9353 12.9709 14.0882 12.3463 13.4637C11.7218 12.8391 10.8747 12.4883 9.99151 12.4883H4.99621C4.11299 12.4883 3.26594 12.8391 2.64141 13.4637C2.01687 14.0882 1.66602 14.9353 1.66602 15.8185V17.4836"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M7.49231 9.15808C9.33153 9.15808 10.8225 7.6671 10.8225 5.82788C10.8225 3.98866 9.33153 2.49768 7.49231 2.49768C5.65309 2.49768 4.16211 3.98866 4.16211 5.82788C4.16211 7.6671 5.65309 9.15808 7.49231 9.15808Z"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M18.316 17.4835V15.8184C18.3155 15.0805 18.0699 14.3637 17.6178 13.7806C17.1657 13.1974 16.5328 12.7809 15.8184 12.5964"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M13.3203 2.60583C14.0367 2.78925 14.6716 3.20585 15.125 3.78998C15.5784 4.3741 15.8245 5.09252 15.8245 5.83197C15.8245 6.57141 15.5784 7.28983 15.125 7.87395C14.6716 8.45808 14.0367 8.87468 13.3203 9.0581"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <path d="M17.5 12.5C17.5 12.942 17.3244 13.366 17.0118 13.6785C16.6993 13.9911 16.2754 14.1667 15.8333 14.1667H5.83333L2.5 17.5V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H15.8333C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V12.5Z" stroke="currentColor" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
@@ -1377,20 +1351,12 @@ export const DashboardCardDealsIcon = ({ className, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M18.317 5.82788L11.2403 12.9046L7.07759 8.7418L1.66602 14.1534"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M13.3203 5.82788H18.3156V10.8232"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <path d="M10.0003 6.66666V3.33333H6.66699" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.9997 6.66667H4.99967C4.0792 6.66667 3.33301 7.41286 3.33301 8.33334V15C3.33301 15.9205 4.0792 16.6667 4.99967 16.6667H14.9997C15.9201 16.6667 16.6663 15.9205 16.6663 15V8.33334C16.6663 7.41286 15.9201 6.66667 14.9997 6.66667Z" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.66699 11.6667H3.33366" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.667 11.6667H18.3337" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5 10.8333V12.5" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.5 10.8333V12.5" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 );
 
@@ -1404,20 +1370,8 @@ export const DashboardCardRevenueIcon = ({ className, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M9.99023 1.66504V18.316"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M14.1541 4.16272H7.91002C7.1372 4.16272 6.39603 4.46972 5.84956 5.01619C5.3031 5.56266 4.99609 6.30382 4.99609 7.07664C4.99609 7.84946 5.3031 8.59063 5.84956 9.1371C6.39603 9.68357 7.1372 9.99057 7.91002 9.99057H12.0728C12.8456 9.99057 13.5868 10.2976 14.1332 10.844C14.6797 11.3905 14.9867 12.1317 14.9867 12.9045C14.9867 13.6773 14.6797 14.4185 14.1332 14.9649C13.5868 15.5114 12.8456 15.8184 12.0728 15.8184H4.99609"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <path d="M5.83301 5.83333H14.1663V14.1667" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.83301 14.1667L14.1663 5.83333" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 );
 
@@ -1431,13 +1385,15 @@ export const DashboardCardEscrowIcon = ({ className, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M16.6509 10.8231C16.6509 14.9858 13.737 17.0672 10.2735 18.2744C10.0922 18.3359 9.89518 18.3329 9.71573 18.2661C6.244 17.0672 3.33008 14.9858 3.33008 10.8231V4.99525C3.33008 4.77444 3.41779 4.56268 3.57393 4.40654C3.73006 4.25041 3.94182 4.1627 4.16263 4.1627C5.82773 4.1627 7.9091 3.16364 9.35774 1.89816C9.53412 1.74747 9.75849 1.66467 9.99048 1.66467C10.2225 1.66467 10.4468 1.74747 10.6232 1.89816C12.0802 3.17196 14.1532 4.1627 15.8183 4.1627C16.0391 4.1627 16.2509 4.25041 16.407 4.40654C16.5632 4.56268 16.6509 4.77444 16.6509 4.99525V10.8231Z"
-      stroke="currentColor"
-      strokeWidth="1.6651"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+   <g clip-path="url(#clip0_657_9024)">
+<path d="M10.0003 18.3333C14.6027 18.3333 18.3337 14.6024 18.3337 10C18.3337 5.39763 14.6027 1.66667 10.0003 1.66667C5.39795 1.66667 1.66699 5.39763 1.66699 10C1.66699 14.6024 5.39795 18.3333 10.0003 18.3333Z" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 5V10L13.3333 11.6667" stroke="#3FA284" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_657_9024">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
   </svg>
 );
 

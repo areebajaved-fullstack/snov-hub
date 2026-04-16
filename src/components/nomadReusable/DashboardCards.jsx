@@ -67,37 +67,23 @@ const DashboardCardItem = ({
   valueClassName,
 }) => {
   return (
-    <article
-      className={`h-40 rounded-2xl border border-gray-200/60 bg-white p-[17px] ${className}`}
-    >
-      <div className="flex h-full flex-col">
-        <div className="flex items-center justify-between">
-          <div
-            className={`flex h-9 w-9 items-center justify-center rounded-[10px] ${iconBgClass}`}
-          >
-            {Icon ? (
-              <Icon className={`h-5 w-5 ${iconClass}`} />
-            ) : (
-              <DashboardCardUsersIcon className="h-5 w-5 text-indigo-500" />
-            )}
+    <div data-layer="Background+Border+Shadow" className={`BackgroundBorderShadow  p-5 bg-white rounded-2xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] outline outline-1 outline-offset-[-1px] outline-gray-200 inline-flex flex-col justify-start items-start ${className}`}>
+      <div data-layer="Container" className="Container self-stretch inline-flex justify-between items-start">
+        <div data-layer="Container" className="Container size- inline-flex flex-col justify-start items-start gap-2">
+          <div data-layer="Container" className="Container self-stretch flex flex-col justify-start items-start">
+            <div data-layer="Human Escalation" className="HumanEscalation justify-center text-gray-500 text-sm font-normal font-['Inter_Tight'] leading-5">{title}</div>
           </div>
-          <span className="rounded-sm bg-emerald-50 px-2 pt-1 text-[10px] font-bold leading-4 tracking-tight text-[#009966]">
-            {percentage}
-          </span>
+          <div data-layer="Container" className="Container self-stretch flex flex-col justify-start items-start">
+            <div data-layer="12.7%" className="7 justify-center text-slate-900 text-2xl font-medium font-['Inter_Tight'] leading-8">{value}</div>
+          </div>
         </div>
-
-        <div className={`mt-4 text-2xl font-bold leading-8 text-[#101828] ${valueClassName}`}>
-          {value}
-        </div>
-
-        <div className="mt-2 space-y-1">
-          <p className="text-xs font-medium leading-4 text-[#4A5565]">{title}</p>
-          <p className="text-[10px] font-normal leading-4 tracking-tight text-[#6A7282]">
-            {trendLabel}
-          </p>
+        <div data-layer="Overlay" className={`Overlay size-10 ${iconBgClass} rounded-xl outline outline-1 outline-offset-[-1px] outline-zinc-100 flex justify-center items-center`}>
+          <div data-svg-wrapper data-layer="SVG" className={`Svg relative ${iconClass}`}>
+            <Icon />
+          </div>
         </div>
       </div>
-    </article>
+    </div>
   );
 };
 

@@ -47,7 +47,7 @@ const HeroSection = () => {
         </div>
 
         {/* Dashboard Card */}
-        <div className="relative w-full lg:w-[1240px] mt-10 bg-white/5 backdrop-blur-[1px] rounded-3xl border border-white/40 shadow-[0px_40px_100px_rgba(0,0,0,0.08)] overflow-hidden px-8 sm:px-12 md:px-16 lg:px-0">
+        <div className="relative w-full lg:w-[1280px] mt-10 bg-white/5 backdrop-blur-[1px] rounded-3xl border border-white/40 shadow-[0px_40px_100px_rgba(0,0,0,0.08)] overflow-hidden px-8 sm:px-12 md:px-16 lg:px-0">
 
           <img
             src={dashboardMock}
@@ -59,13 +59,13 @@ const HeroSection = () => {
       </div>
 
       {/* 🔥 FINAL BOTTOM EFFECT (NO WHITE PATCH) */}
-      <div className="absolute bottom-0 left-0 right-0 h-[200px] pointer-events-none z-20">
+      <div className="absolute bottom-0 left-0 right-0 h-[250px] pointer-events-none z-20" style={{ background: 'linear-gradient(180deg, rgba(242, 244, 245, 0) 0%, rgba(242, 244, 245, 1) 100%)' }}>
 
         {/* Smooth transparent fade */}
         <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/5 to-transparent"></div>
 
         {/* Real blur layer */}
-        <div className="absolute inset-0 backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0 backdrop-blur-[0.5px]"></div>
 
       </div>
 
