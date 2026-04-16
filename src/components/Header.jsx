@@ -17,7 +17,7 @@ const Header = () => {
                             Snov Hub
                         </span>
                     </div>
-
+{/* newv */}
                     {/* Desktop Navigation Links - Centered */}
                     <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center lg:gap-[40px]">
                         <Link to="/" className="text-[#061A22] font-medium text-[16px] whitespace-nowrap hover:text-emerald-500 transition-colors duration-200">Home</Link>
