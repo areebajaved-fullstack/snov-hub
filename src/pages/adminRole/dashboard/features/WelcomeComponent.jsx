@@ -5,6 +5,7 @@ const WelcomeComponent = ({
   conversationsCount = 1280,
   className = "",
   onNewAgentClick,
+  onTestBotClick,
 }) => {
   return (
     <div className={` w-[1136px] Container self-stretch inline-flex justify-between items-center ${className}`}>
@@ -25,7 +26,10 @@ const WelcomeComponent = ({
       {/* Right Section - Action Buttons */}
       <div className="Container size- flex justify-start items-center gap-2">
         {/* Test Bot Button */}
-        <div className="Button h-10 px-4 py-2 bg-gray-50 rounded-[10px] outline outline-[0.80px] outline-offset-[-0.80px] outline-emerald-950 flex justify-center items-center gap-2 hover:bg-emerald-950 hover:text-white transition-colors duration-200 cursor-pointer">
+        <div 
+          onClick={onTestBotClick}
+          className="Button h-10 px-4 py-2 bg-gray-50 rounded-[10px] outline outline-[0.80px] outline-offset-[-0.80px] outline-emerald-950 flex justify-center items-center gap-2 hover:bg-emerald-950 hover:text-white transition-colors duration-200 cursor-pointer"
+        >
           <div data-svg-wrapper className="Svg relative">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 2L13.3333 8L4 14V2Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>

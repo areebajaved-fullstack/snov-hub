@@ -7,10 +7,13 @@ import ReusableDataTable from "../../../components/ReusableDataTable";
 import MonthlyUsage from "./features/MonthlyUsage";
 import WelcomeComponent from "./features/WelcomeComponent";
 import CreateAgentModal from "./features/CreateAgentModal";
+import TestBotModal from "./features/TestBotModal";
+
 // import PendingFlag from "./features/pendingFlag";
 
 const AdminDashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTestBotOpen, setIsTestBotOpen] = useState(false);
 
   const transactionVolumeData = [
     { value: 120, time: "2pm" },
@@ -39,18 +42,26 @@ const AdminDashboard = () => {
       <div className="space-y-6 max-w-full">
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
           <div className="xl:col-span-12 space-y-6">
-          
+
             <div className=" w-full rounded-[1.5rem]">
-              <WelcomeComponent onNewAgentClick={() => setIsModalOpen(true)} />
+              <WelcomeComponent 
+                onNewAgentClick={() => setIsModalOpen(true)} 
+                onTestBotClick={() => setIsTestBotOpen(true)}
+              />
             </div>
 
             <div className="rounded-[1.5rem]">
               <DashboardCardsContainer />
             </div>
 
-            <CreateAgentModal 
-              isOpen={isModalOpen} 
-              onClose={() => setIsModalOpen(false)} 
+            <CreateAgentModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
+
+            <TestBotModal
+              isOpen={isTestBotOpen}
+              onClose={() => setIsTestBotOpen(false)}
             />
 
             <div className="rounded-[1.5rem]">
@@ -59,22 +70,22 @@ const AdminDashboard = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-4 lg:gap-3">
               <div className="w-full">
-              <LineChart
-                title="Conversation Volume"
-                subtitle="New Companies vs New Recruiters"
-                data={platformGrowthData}
-                dataKeys={["companies"]}
-                dataLabels={["Companies"]}
-         colors={["#3FA284", "#114F38", ]}
-                xAxisKey="days"
-                yAxisDomain={[0, 280]}
-                yAxisTicks={[0, 50, 100, 150, 200, 250]}
-                yAxisFormatter={(value) => `${value}`}
-                showDropdowns={true}
-                currency=""
-                showLegend={true}
-                height={288}
-              />
+                <LineChart
+                  title="Conversation Volume"
+                  subtitle="New Companies vs New Recruiters"
+                  data={platformGrowthData}
+                  dataKeys={["companies"]}
+                  dataLabels={["Companies"]}
+                  colors={["#3FA284", "#114F38",]}
+                  xAxisKey="days"
+                  yAxisDomain={[0, 280]}
+                  yAxisTicks={[0, 50, 100, 150, 200, 250]}
+                  yAxisFormatter={(value) => `${value}`}
+                  showDropdowns={true}
+                  currency=""
+                  showLegend={true}
+                  height={288}
+                />
               </div>
 
               <div className="w-full">
@@ -84,7 +95,7 @@ const AdminDashboard = () => {
                   data={transactionVolumeData}
                   dataKeys={["value"]}
                   dataLabels={["GMV"]}
-                  colors={["#3FA284", "#114F38", ]}
+                  colors={["#3FA284", "#114F38",]}
                   yAxisDomain={[0, 250]}
                   yAxisTicks={[0, 50, 100, 150, 200, 250]}
                   yAxisFormatter={(value) => `${value}`}
@@ -95,10 +106,10 @@ const AdminDashboard = () => {
             </div>
             <div className="grid grid-cols-1  gap-4 lg:gap-3">
               <ReusableDataTable />
-             
-              </div>
 
-             
+            </div>
+
+
           </div>
         </div>
       </div>
