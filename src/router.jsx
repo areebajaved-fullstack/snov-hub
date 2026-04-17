@@ -18,6 +18,8 @@ import SharedChat from "./pages/commanPages/chat";
 import SharedProfile from "./pages/commanPages/profile";
 
 import AdminDashboard from "./pages/adminRole/dashboard";
+import AIAgents from "./pages/adminRole/aiagents";
+import KnowledgeBase from "./pages/adminRole/knowledgebase";
 import AgencyDashboard from "./pages/agencyRole/dashboard";
 import CompanyDashboard from "./pages/companyRole/dashboard";
 import RecruiterDashboard from "./pages/recruiterRole/dashboard";
@@ -55,6 +57,8 @@ const AppRouter = () => {
         <Route index element={<AdminDashboard />} />
         <Route path="dashboard" element={<AdminDashboard />} />
         <Route path="chat" element={<SharedChat />} />
+        <Route path="ai-agents" element={<AIAgents />} />
+        <Route path="knowledge-base" element={<KnowledgeBase />} />
         <Route path="notifications" element={<NotificationsScreen />} />
       </Route>
 

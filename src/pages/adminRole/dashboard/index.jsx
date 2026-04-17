@@ -6,7 +6,7 @@ import SectionHeader from "../../../components/nomadReusable/SectionHeader";
 import ReusableDataTable from "../../../components/ReusableDataTable";
 import MonthlyUsage from "./features/MonthlyUsage";
 import WelcomeComponent from "./features/WelcomeComponent";
-import CreateAgentModal from "./features/CreateAgentModal";
+import CreateAgentModal from "../commonpages/CreateAgentModal";
 import TestBotModal from "./features/TestBotModal";
 
 // import PendingFlag from "./features/pendingFlag";
@@ -44,8 +44,8 @@ const AdminDashboard = () => {
           <div className="xl:col-span-12 space-y-6">
 
             <div className=" w-full rounded-[1.5rem]">
-              <WelcomeComponent 
-                onNewAgentClick={() => setIsModalOpen(true)} 
+              <WelcomeComponent
+                onNewAgentClick={() => setIsModalOpen(true)}
                 onTestBotClick={() => setIsTestBotOpen(true)}
               />
             </div>
