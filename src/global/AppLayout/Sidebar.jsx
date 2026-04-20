@@ -59,9 +59,9 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
          
           { path: "/admin/ai-agents", name: "AI agents", icon: AdminAIagentNavIcon },
           { path: "/admin/knowledge-base", name: "Knowledge base", icon: AdminKnowledgebaseNavIcon },
-          { path: "/admin/chat", name: "Human Inbox", icon: AdminHumanResource },
-          { path: "/admin/chat", name: "Channels", icon: AdminChannelNavIcon },
-         { path: "/admin/chat", name: "Analytics", icon: AdminRealAnalyticsNavIcon },
+          { path: "/admin/humanInbox", name: "Human Inbox", icon: AdminHumanResource },
+          { path: "/admin/channels", name: "Channels", icon: AdminChannelNavIcon },
+         { path: "/admin/analytics", name: "Analytics", icon: AdminRealAnalyticsNavIcon },
          { divider: true },
        
         ],
