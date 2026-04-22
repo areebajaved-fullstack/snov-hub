@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import DashboardCardsContainer from "./features/dashboardCard";
 import BarGraph from "../../../components/BarGraph";
 import LineChart from "../../../components/nomadReusable/LineChart";
-import SectionHeader from "../../../components/nomadReusable/SectionHeader";
-import ReusableDataTable from "../../../components/ReusableDataTable";
+// import ReusableDataTable from "../../../components/ReusableDataTable";
 import MonthlyUsage from "./features/MonthlyUsage";
 import WelcomeComponent from "./features/WelcomeComponent";
 import CreateAgentModal from "../commonpages/CreateAgentModal";
 import TestBotModal from "./features/TestBotModal";
-
-// import PendingFlag from "./features/pendingFlag";
-
+import UserTable from "./features/UserTable";
 const AdminDashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTestBotOpen, setIsTestBotOpen] = useState(false);
@@ -38,80 +35,73 @@ const AdminDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 overflow-x-hidden">
-      <div className="space-y-6 max-w-full">
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
-          <div className="xl:col-span-12 space-y-6">
+    <div className="min-h-screen bg-gray-100 overflow-x-hidden m-0 p-0">
 
-            <div className=" w-full rounded-[1.5rem]">
-              <WelcomeComponent
-                onNewAgentClick={() => setIsModalOpen(true)}
-                onTestBotClick={() => setIsTestBotOpen(true)}
-              />
-            </div>
+      {/* MAIN WRAPPER (NO EXTRA SPACE NOW) */}
+      <div className="w-full flex flex-col gap-3 pt-0 mt-0">
 
-            <div className="rounded-[1.5rem]">
-              <DashboardCardsContainer />
-            </div>
-
-            <CreateAgentModal
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)}
-            />
-
-            <TestBotModal
-              isOpen={isTestBotOpen}
-              onClose={() => setIsTestBotOpen(false)}
-            />
-
-            <div className="rounded-[1.5rem]">
-              <MonthlyUsage />
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-4 lg:gap-3">
-              <div className="w-full">
-                <LineChart
-                  title="Conversation Volume"
-                  subtitle="New Companies vs New Recruiters"
-                  data={platformGrowthData}
-                  dataKeys={["companies"]}
-                  dataLabels={["Companies"]}
-                  colors={["#3FA284", "#114F38",]}
-                  xAxisKey="days"
-                  yAxisDomain={[0, 280]}
-                  yAxisTicks={[0, 50, 100, 150, 200, 250]}
-                  yAxisFormatter={(value) => `${value}`}
-                  showDropdowns={true}
-                  currency=""
-                  showLegend={true}
-                  height={288}
-                />
-              </div>
-
-              <div className="w-full">
-                <BarGraph
-                  title="Transaction Volume"
-                  subtitle="Monthly Gross Merchandise Value (GMV)"
-                  data={transactionVolumeData}
-                  dataKeys={["value"]}
-                  dataLabels={["GMV"]}
-                  colors={["#3FA284", "#114F38",]}
-                  yAxisDomain={[0, 250]}
-                  yAxisTicks={[0, 50, 100, 150, 200, 250]}
-                  yAxisFormatter={(value) => `${value}`}
-                  height={327}
-                  showDropdowns={true}
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1  gap-4 lg:gap-3">
-              <ReusableDataTable />
-
-            </div>
-
-
-          </div>
+        {/* WELCOME SECTION */}
+        <div className="w-full rounded-[1.5rem] pt-0 mt-0 pb-2">
+          <WelcomeComponent
+            onNewAgentClick={() => setIsModalOpen(true)}
+            onTestBotClick={() => setIsTestBotOpen(true)}
+          />
         </div>
+
+        {/* DASHBOARD CARDS */}
+        <DashboardCardsContainer />
+
+        {/* MODALS */}
+        <CreateAgentModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+
+        <TestBotModal
+          isOpen={isTestBotOpen}
+          onClose={() => setIsTestBotOpen(false)}
+        />
+
+        {/* MONTHLY USAGE */}
+        <MonthlyUsage />
+
+        {/* GRAPHS */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+          <LineChart
+            title="Conversation Volume"
+            subtitle=" 7-Day Activity Cycle"
+            data={platformGrowthData}
+            dataKeys={["companies"]}
+            dataLabels={["Companies"]}
+            colors={["#3FA284", "#114F38"]}
+            xAxisKey="days"
+            yAxisDomain={[0, 280]}
+            yAxisTicks={[0, 70, 140, 210, 280,]}
+            yAxisFormatter={(value) => `${value}`}
+            showDropdowns={true}
+            currency=""
+            showLegend={true}
+            height={288}
+          />
+
+          <BarGraph
+            title="Peak Hours"
+            subtitle="Average Hourly Heat"
+            data={transactionVolumeData}
+            dataKeys={["value"]}
+            dataLabels={["GMV"]}
+            colors={["#3FA284", "#114F38"]}
+            yAxisDomain={[0, 100]}
+            yAxisTicks={[0, 25, 50, 75, 100]}
+            yAxisFormatter={(value) => `${value}`}
+            height={327}
+            showDropdowns={true}
+          />
+
+        </div>
+<UserTable/>
+        
       </div>
     </div>
   );

@@ -1,25 +1,20 @@
 import React from "react";
 
-/**
- * ReusableTable Component
- * 
- * @param {Array} columns - Array of column definitions: { header: string, accessor: string, render: function, width: string }
- * @param {Array} data - Array of data objects to display
- * @param {string} className - Additional CSS classes for the container
- */
 const ReusableTable = ({ columns, data, className = "" }) => {
   return (
-    <div 
-      className={`w-full bg-white rounded-2xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] outline outline-1 outline-offset-[-1px] outline-gray-200 overflow-hidden ${className}`}
-    >
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
+    <div className={`w-full ${className}`}>
+
+      {/* ✅ DESKTOP / TABLET TABLE */}
+      <div className="hidden md:block w-full overflow-x-auto">
+        <table className="w-full bg-white rounded-2xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-gray-200 overflow-hidden">
+
+          {/* HEADER */}
           <thead>
             <tr className="bg-gray-100/50 border-b border-gray-200 h-12">
               {columns.map((col, index) => (
                 <th
                   key={index}
-                  className="px-6 text-left text-gray-500 text-xs font-semibold font-['Inter_Tight'] leading-4 tracking-wider"
+                  className="px-6 text-left text-gray-500 text-xs font-medium font-poppins"
                   style={{ width: col.width }}
                 >
                   {col.header}
@@ -27,36 +22,57 @@ const ReusableTable = ({ columns, data, className = "" }) => {
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
-            {data && data.length > 0 ? (
-              data.map((row, rowIndex) => (
-                <tr 
-                  key={rowIndex} 
-                  className="h-16 hover:bg-gray-50/50 transition-colors duration-200"
-                >
-                  {columns.map((col, colIndex) => (
-                    <td
-                      key={colIndex}
-                      className="px-6 text-sm text-slate-900 font-['Inter_Tight'] leading-5"
-                    >
-                      {col.render ? col.render(row) : row[col.accessor]}
-                    </td>
-                  ))}
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td 
-                  colSpan={columns.length} 
-                  className="h-32 text-center text-gray-400 font-['Inter_Tight']"
-                >
-                  No data available.
-                </td>
+
+          {/* BODY */}
+          <tbody>
+            {data.map((row, rowIndex) => (
+              <tr
+                key={rowIndex}
+                className="h-16 border-b border-gray-200 last:border-none hover:bg-gray-50"
+              >
+                {columns.map((col, colIndex) => (
+                  <td
+                    key={colIndex}
+                    className="px-6 text-sm text-slate-900 font-poppins"
+                  >
+                    {col.render
+                      ? col.render(row)
+                      : row[col.accessor]}
+                  </td>
+                ))}
               </tr>
-            )}
+            ))}
           </tbody>
         </table>
       </div>
+
+      {/* ✅ MOBILE CARD VIEW */}
+      <div className="md:hidden flex flex-col gap-3">
+        {data.map((row, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl border border-gray-200 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] p-4"
+          >
+            {columns.map((col, i) => (
+              <div
+                key={i}
+                className="flex justify-between items-center py-1"
+              >
+                <span className="text-gray-500 text-xs font-poppins">
+                  {col.header}
+                </span>
+
+                <span className="text-slate-900 text-sm font-poppins text-right">
+                  {col.render
+                    ? col.render(row)
+                    : row[col.accessor]}
+                </span>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
     </div>
   );
 };

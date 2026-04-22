@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,12 +8,22 @@
 :root {
   --font-sans: "Inter Tight", sans-serif;
   --font-primary: "Inter Tight", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 /* Alias: treat any existing `font-family: Geist` usage as Inter Tight. */
 @font-face {
   font-family: "Geist";
   src: local("Inter Tight");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Alias: treat any existing `font-family: Poppins` usage as Poppins. */
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins");
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;

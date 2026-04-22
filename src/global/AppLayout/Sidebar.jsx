@@ -63,7 +63,8 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
           { path: "/admin/channels", name: "Channels", icon: AdminChannelNavIcon },
          { path: "/admin/analytics", name: "Analytics", icon: AdminRealAnalyticsNavIcon },
          { divider: true },
-       
+         { path: "/admin/team", name: "Team", icon: AdminRealAnalyticsNavIcon },
+         { path: "/admin/setting", name: "Settings", icon: AdminRealAnalyticsNavIcon },
         ],
         bottom: [],
       },

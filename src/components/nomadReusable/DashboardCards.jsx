@@ -71,10 +71,10 @@ const DashboardCardItem = ({
       <div data-layer="Container" className="Container self-stretch inline-flex justify-between items-start">
         <div data-layer="Container" className="Container size- inline-flex flex-col justify-start items-start gap-2">
           <div data-layer="Container" className="Container self-stretch flex flex-col justify-start items-start">
-            <div data-layer="Human Escalation" className="HumanEscalation justify-center text-gray-500 text-sm font-normal font-['Inter_Tight'] leading-5">{title}</div>
+            <div data-layer="Human Escalation" className="HumanEscalation justify-center text-[#6B7280] text-sm font-normal font-poppins leading-5">{title}</div>
           </div>
           <div data-layer="Container" className="Container self-stretch flex flex-col justify-start items-start">
-            <div data-layer="12.7%" className="7 justify-center text-slate-900 text-2xl font-medium font-['Inter_Tight'] leading-8">{value}</div>
+            <div data-layer="12.7%" className=" justify-center text-slate-900 text-2xl font-medium font-poppins leading-8">{value}</div>
           </div>
         </div>
         <div data-layer="Overlay" className={`Overlay size-10 ${iconBgClass} rounded-xl outline outline-1 outline-offset-[-1px] outline-zinc-100 flex justify-center items-center`}>

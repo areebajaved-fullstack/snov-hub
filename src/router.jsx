@@ -22,6 +22,9 @@ import AIAgents from "./pages/adminRole/aiagents";
 import KnowledgeBase from "./pages/adminRole/knowledgebase";
 import HumanInbox from "./pages/adminRole/humanInbox";
 import Channels from "./pages/adminRole/Channels";
+import AdminTeam from "./pages/adminRole/team";
+import AdminSetting from "./pages/adminRole/setting";
+import AdminAnalytics from "./pages/adminRole/analytics";
 import AgencyDashboard from "./pages/agencyRole/dashboard";
 import CompanyDashboard from "./pages/companyRole/dashboard";
 import RecruiterDashboard from "./pages/recruiterRole/dashboard";
@@ -63,6 +66,9 @@ const AppRouter = () => {
         <Route path="ai-agents" element={<AIAgents />} />
         <Route path="knowledge-base" element={<KnowledgeBase />} />
         <Route path="channels" element={<Channels />} />
+        <Route path="analytics" element={<AdminAnalytics />} />
+        <Route path="team" element={<AdminTeam />} />
+        <Route path="setting" element={<AdminSetting />} />
         <Route path="notifications" element={<NotificationsScreen />} />
       </Route>
 

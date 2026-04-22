@@ -88,7 +88,7 @@ const AgentsTable = () => {
       conversations: "2,100",
       lastUpdated: "3 days ago",
     },
-  ];
+  ];d
 
   return <ReusableTable columns={columns} data={data} />;
 };

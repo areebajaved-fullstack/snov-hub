@@ -177,12 +177,12 @@ export default {
         64: "16rem",
       },
       fontFamily: {
-        poppins: ["Inter Tight", "sans-serif"],
-        sans: ["Inter Tight", "sans-serif"],
-        primary: ["Inter Tight", "sans-serif"],
-        intertight: ["Inter Tight", "sans-serif"],
-        geist: ["Inter Tight", "sans-serif"],
-      },
+  poppins: ["Poppins", "sans-serif"], // ✅ correct
+  sans: ["Inter Tight", "sans-serif"],
+  primary: ["Inter Tight", "sans-serif"],
+  intertight: ["Inter Tight", "sans-serif"],
+  geist: ["Inter Tight", "sans-serif"],
+},
     },
   },
 

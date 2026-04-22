@@ -39,27 +39,38 @@ const BarGraph = ({
   ];
 
   const chartData = data.length > 0 ? data : defaultData;
-  const isSingleSeries = dataKeys.length === 1;
-
 
   return (
     <div className="w-full rounded-2xl border border-gray-200 bg-white p-5 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] outline outline-1 outline-offset-[-1px] outline-gray-200 inline-flex flex-col justify-start items-start gap-4 font-poppins">
+      
       {/* Header */}
       <div className="self-stretch flex flex-col justify-start items-start">
-        <div className="text-slate-900 text-sm font-semibold font-poppins leading-5">{title}</div>
+        
+        {/* Title */}
+        <div className="text-slate-900 text-sm font-medium leading-5 font-poppins mb-2">
+          {title}
+        </div>
+
+        {/* Subtitle (new) */}
+        {subtitle && (
+          <div className="text-gray-500 text-xs leading-4 mt-1 font-poppins mb-2 ">
+            {subtitle}
+          </div>
+        )}
+
       </div>
 
-      {/* Chart Container */}
+      {/* Chart */}
       <div className="self-stretch h-60 flex flex-col justify-center items-start">
         <div className="self-stretch flex-1 relative overflow-hidden">
 
           <ResponsiveContainer width="100%" height={240}>
             <BarChart
-              data={chartData}
+              data={defaultData}
               margin={{
                 top: 4,
                 right: 10,
-                left: 5,
+                left: 0,
                 bottom: 10,
               }}
               barCategoryGap="25%"
@@ -72,7 +83,7 @@ const BarGraph = ({
                   fontSize: 12,
                   fontWeight: 400,
                 }}
-                width={35}
+                width={45}
                 allowDecimals={false}
                 domain={yAxisDomain}
                 ticks={yAxisTicks}
@@ -107,11 +118,18 @@ const BarGraph = ({
               </Bar>
               
               <defs>
-                <linearGradient id="peakHoursGradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stopColor="#3FA284" />
-                  <stop offset="1" stopColor="#114F38" />
+                <linearGradient
+                  id="peakHoursGradient"
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="1"
+                >
+                  <stop offset="0%" stopColor="#3FA284" />
+                  <stop offset="100%" stopColor="#114F38" />
                 </linearGradient>
               </defs>
+
             </BarChart>
           </ResponsiveContainer>
         </div>

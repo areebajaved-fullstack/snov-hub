@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import WebsiteWidget from './WebsiteWidget';
 import Integrations from './Integrations';
+import AddChannelModal from './AddChannel';
 
 const Channels = () => {
   const [activeTab, setActiveTab] = useState('website');
+  const [showAddChannel, setShowAddChannel] = useState(false);
+  const [channels, setChannels] = useState([]);
+
+  const handleAddChannel = (newChannel) => {
+    setChannels([...channels, newChannel]);
+  };
 
   return (
     <div className="w-full flex flex-col gap-6">
@@ -58,7 +65,11 @@ const Channels = () => {
         </div>
         {/* Add Channel Button - Only show on Integrations tab */}
         {activeTab === 'integrations' && (
-          <div data-layer="Button" className="Button h-10 px-4 py-2 bg-emerald-950 rounded-[10px] flex justify-center items-center gap-2">
+          <div 
+            data-layer="Button" 
+            className="Button h-10 px-4 py-2 bg-emerald-950 rounded-[10px] flex justify-center items-center gap-2 cursor-pointer"
+            onClick={() => setShowAddChannel(true)}
+          >
             <div data-svg-wrapper data-layer="SVG" className="Svg relative">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10" stroke="#F2F8F6" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -75,7 +86,16 @@ const Channels = () => {
       {activeTab === 'website' ? (
         <WebsiteWidget />
       ) : (
-        <Integrations />
+        <Integrations channels={channels} />
+      )}
+      
+      {/* Add Channel Modal */}
+      {showAddChannel && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={() => setShowAddChannel(false)}>
+          <div onClick={(e) => e.stopPropagation()}>
+            <AddChannelModal onClose={() => setShowAddChannel(false)} />
+          </div>
+        </div>
       )}
     </div>
   );

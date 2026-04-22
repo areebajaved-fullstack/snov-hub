@@ -9,33 +9,37 @@ const MonthlyUsage = ({
   const percentage = Math.round((currentUsage / maxUsage) * 100);
 
   return (
-    <div className={`BackgroundBorderShadow self-stretch h-24 relative bg-white rounded-2xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] outline outline-1 outline-offset-[-1px] outline-gray-200 ${className}`}>
-      {/* Header Container */}
-      <div className="Container w-[1094px] left-[21px] top-[21px] absolute inline-flex justify-between items-center">
-        {/* Title */}
-        <div className="Container size- inline-flex flex-col justify-start items-start">
-          <div className="MonthlyUsage justify-center text-gray-500 text-sm font-normal font-poppins leading-5">{title}</div>
-        </div>
+    <div
+      className={`self-stretch relative bg-white rounded-2xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.05)] border border-gray-200 font-poppins ${className}`}
+      style={{ height: "102px" }}
+    >
+      {/* Content Container */}
+      <div className="h-full w-full flex flex-col justify-center px-3 md:px-4 py-2 md:py-3">
         
-        {/* Usage Display */}
-        <div className="Container size- inline-flex flex-col justify-start items-start">
-          <div className="00010000 justify-center text-slate-900 text-sm font-medium font-poppins leading-5">
+        {/* Header */}
+        <div className="flex justify-between items-start mb-2 md:mb-3">
+          
+          {/* Title */}
+          <div className="text-gray-500 text-xs md:text-sm font-normal leading-4 md:leading-5">
+            {title}
+          </div>
+          
+          {/* Usage */}
+          <div className="text-slate-900 text-xs md:text-sm font-medium leading-4 md:leading-5">
             {currentUsage.toLocaleString()} / {maxUsage.toLocaleString()}
           </div>
         </div>
-      </div>
 
-      {/* Progress Bar */}
-      <div className="Progressbar w-[1094px] h-2.5 left-[21px] top-[49px] absolute bg-gray-100 rounded-[9999px] overflow-hidden">
-        <div 
-          className="Background h-2.5 left-0 top-0 absolute bg-gradient-to-b from-teal-600 to-emerald-900 rounded-[42px]"
-          style={{ width: `${percentage}%` }}
-        />
-      </div>
+        {/* Progress Bar */}
+        <div className="w-full h-2 md:h-2.5 bg-gray-100 rounded-full overflow-hidden mb-1.5 md:mb-2">
+          <div
+            className="h-full bg-gradient-to-b from-teal-600 to-emerald-900 rounded-full"
+            style={{ width: `${percentage}%` }}
+          />
+        </div>
 
-      {/* Percentage Text */}
-      <div className="Container w-[1094px] left-[21px] top-[65px] absolute inline-flex flex-col justify-start items-start">
-        <div className="OfPlanUsed justify-center text-gray-500 text-xs font-normal font-poppins leading-4">
+        {/* Percentage */}
+        <div className="text-gray-500 text-xs font-normal leading-4">
           {percentage}% of plan used
         </div>
       </div>
