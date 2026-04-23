@@ -40,13 +40,13 @@ const LineChart = ({
       <div className="self-stretch flex flex-col justify-start items-start">
         
         {/* Title */}
-        <div className="text-slate-900 text-sm font-medium leading-5 font-poppins mb-2">
+        <div className=" text-sm font-medium  text-[#0F1729] leading-5 font-poppins mb-2">
           {title}
         </div>
 
         {/* Subtitle */}
         {subtitle && (
-          <div className="text-gray-500 text-xs leading-4 mt-1 font-poppins mb-2">
+          <div className="text-[#6B7280] text-xs leading-4 mt-1 font-poppins mb-2">
             {subtitle}
           </div>
         )}
