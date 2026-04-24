@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WelcomeComponent from "./features/WelcomeComponent";
 import DashboardCardsContainer from "./features/dashboardCard";
+import Searchbar from "./features/Searchbar";
 import AgentsTable from "./features/tabledata";
 import CreateAgentModal from "../commonpages/CreateAgentModal";
 
@@ -16,13 +17,17 @@ const AdminDashboard = () => {
               <WelcomeComponent onNewAgentClick={() => setIsModalOpen(true)} />
             </div>
 
+          
+
             <div className="rounded-[1.5rem]">
               <DashboardCardsContainer />
             </div>
-
-            <div className="grid grid-cols-1 gap-4 lg:gap-3">
-              <AgentsTable />
+  <div className="w-full">
+              <Searchbar />
             </div>
+           
+              <AgentsTable />
+          
           </div>
         </div>
       </div>

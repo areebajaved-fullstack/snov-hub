@@ -17,7 +17,7 @@ const PublishStep = () => {
   };
 
   return (
-    <div className="w-full max-w-[612px] mx-auto flex flex-col items-center gap-10 font-Poppins tracking-wide">
+    <div className="w-full max-w-[612px] mx-auto flex flex-col items-center gap-10 font-poppins tracking-wide">
       
       {/* Top Section */}
       <div className="flex flex-col items-center gap-3 text-center">
@@ -33,11 +33,11 @@ const PublishStep = () => {
           </svg>
         </div>
 
-        <h2 className="text-lg font-medium text-slate-900">
+        <h2 className="text-lg font-medium text-slate-900 font-poppins">
           Ready to Publish
         </h2>
 
-        <p className="text-sm text-gray-500 max-w-[380px]">
+        <p className="text-sm text-gray-500 max-w-[380px] font-poppins">
           Your agent is configured and ready for deployment.
         </p>
       </div>
@@ -48,10 +48,10 @@ const PublishStep = () => {
         {/* Publish Toggle */}
         <div className="w-full flex items-center justify-between p-4 bg-stone-50 rounded-xl border border-zinc-200">
           <div>
-            <h3 className="text-base font-medium font-Poppins tracking-wide text-[#2B3546]">
+            <h3 className="text-base font-medium text-[#2B3546] font-poppins tracking-wide">
               Publish Status
             </h3>
-            <p className="text-xs text-[#6B7280]">
+            <p className="text-xs text-[#6B7280] font-poppins">
               Make your agent live on all selected channels.
             </p>
           </div>
@@ -72,17 +72,17 @@ const PublishStep = () => {
 
         {/* Embed Script */}
         <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-medium text-[#0F1729]">
+          <h3 className="text-lg font-medium text-[#0F1729] font-poppins">
             Embed Script
           </h3>
 
           <div className="w-full flex items-center justify-between p-3 bg-stone-50 rounded-xl border border-zinc-200">
             
-            <p className="text-sm text-[#13201A] truncate font-Poppins">
+            <p className="text-sm text-[#13201A] truncate font-poppins">
               {scriptText}
             </p>
 
-            {/* Copy Button (UPDATED SVG) */}
+            {/* Copy Button */}
             <button
               onClick={handleCopy}
               className="relative w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition"
@@ -110,6 +110,7 @@ const PublishStep = () => {
                     strokeLinejoin="round"
                   />
                 </g>
+
                 <defs>
                   <clipPath id="clip0">
                     <rect
@@ -122,9 +123,8 @@ const PublishStep = () => {
                 </defs>
               </svg>
 
-              {/* Tooltip */}
               {copied && (
-                <span className="absolute -top-7 text-xs bg-black text-white px-2 py-1 rounded">
+                <span className="absolute -top-7 text-xs bg-black text-white px-2 py-1 rounded font-poppins">
                   Copied!
                 </span>
               )}

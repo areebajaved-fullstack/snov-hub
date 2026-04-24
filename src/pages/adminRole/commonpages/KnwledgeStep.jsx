@@ -20,28 +20,28 @@ const KnowledgeStep = () => {
   };
 
   return (
-    <div className="w-full max-w-[598px] min-h-[288px] flex flex-col gap-4 font-Poppins tracking-wide px-3 sm:px-0">
+    <div className="w-full max-w-[598px] min-h-[288px] flex flex-col gap-4 font-poppins tracking-wide px-3 sm:px-0">
       
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex flex-col gap-[2px]">
-          <h3 className="text-md text-[#121821] font-Poppins tracking-wide">
+          <h3 className="text-md text-[#121821] font-poppins tracking-wide">
             Knowledge Folders
           </h3>
-          <p className="text-xs text-slate-500 font-Poppins tracking-wide">
+
+          <p className="text-xs text-slate-500 font-poppins tracking-wide">
             Select which knowledge sources this agent can access.
           </p>
         </div>
 
         {/* Upload Button */}
         <button className="flex items-center justify-center gap-1 bg-emerald-950 text-[#FFFFFF] text-sm px-3 py-1.5 rounded-lg hover:opacity-90 w-fit">
-          
           + Upload
         </button>
       </div>
 
       {/* List */}
-      <div className="flex flex-col gap-2 font-Poppins tracking-wide">
+      <div className="flex flex-col gap-2 font-poppins tracking-wide">
         {data.map((item) => {
           const isActive = selected.includes(item.name);
 
@@ -49,7 +49,7 @@ const KnowledgeStep = () => {
             <div
               key={item.name}
               onClick={() => toggleItem(item.name)}
-              className={`flex items-center gap-3 p-3 rounded-xl font-Poppins tracking-wide border cursor-pointer transition
+              className={`flex items-center gap-3 p-3 rounded-xl font-poppins tracking-wide border cursor-pointer transition
                 ${
                   isActive
                     ? "border-cyan-950 bg-gray-50"
@@ -78,7 +78,7 @@ const KnowledgeStep = () => {
                 )}
               </div>
 
-              {/* ✅ UPDATED SVG (your provided one) */}
+              {/* Folder Icon */}
               <div className="shrink-0">
                 <svg
                   width="16"
@@ -99,6 +99,7 @@ const KnowledgeStep = () => {
               {/* Text */}
               <div className="flex flex-wrap items-center gap-x-2 text-sm">
                 <span className="text-gray-900">{item.name}</span>
+
                 <span className="text-xs text-slate-500">
                   {item.docs} documents
                 </span>
@@ -111,19 +112,15 @@ const KnowledgeStep = () => {
       {/* Bottom Message */}
       {selected.length === 0 && (
         <div className="py-2 text-center text-xs text-amber-500">
-          No folders selected — agent will rely only on the model's general knowledge.
+          No folders selected — agent will rely only on the model's general
+          knowledge.
         </div>
       )}
     </div>
   );
 };
 
-export default KnowledgeStep;
-  
-  
-  
-  
-  
+export default KnowledgeStep;  
   
   
   
